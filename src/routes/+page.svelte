@@ -329,7 +329,7 @@
         <p class="reviews-intro">See what our members are saying about Rapid Recovery: Elite Training Center</p>
         <!-- Placeholder for Google Reviews embed or testimonial cards -->
         <div class="reviews-cta">
-            <a href="#" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Leave a Review on Google</a>
+            <a href="{base}/#" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Leave a Review on Google</a>
         </div>
     </div>
 </section>
@@ -359,8 +359,8 @@
             <p class="hours-note"><em>Unlike most gyms, day passes can be purchased outside of staffed hours (18+ only with pre-purchase). Under 18 requires parent/guardian signature during staffed hours.</em></p>
         </div>
         <div class="location-cta">
-            <a href="#" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Get Directions</a>
-            <a href="#" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Purchase Day Pass</a>
+            <a href="{base}/#" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Get Directions</a>
+            <a href="{base}/#" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Purchase Day Pass</a>
         </div>
     </div>
 </section>
