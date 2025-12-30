@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import { onMount } from 'svelte';
 
     onMount(() => {
@@ -29,7 +30,7 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<section class="hero pt-hero" id="home" aria-labelledby="hero-title" style="background-image: url('/images/personal_training_banner.jpg');">
+<section class="hero pt-hero" id="home" aria-labelledby="hero-title" style="background-image: url('{base}/images/personal_training_banner.jpg');">
     <div class="hero-overlay" aria-hidden="true"></div>
     
     <div class="hero-content">
@@ -69,7 +70,7 @@
             </p>
         </div>
         <div class="about-image reveal">
-            <img src="/images/personal_training_athlete.jpg" 
+            <img src="{base}/images/personal_training_athlete.jpg" 
                  alt="Athlete training at Rapid Recovery" 
                  loading="lazy"
                  width="800"
@@ -98,7 +99,7 @@
 <section class="about" id="opportunities" aria-labelledby="opportunities-title">
     <div class="about-grid">
         <div class="about-image reveal">
-            <img src="/images/personal_training_opportunities.jpg" 
+            <img src="{base}/images/personal_training_opportunities.jpg" 
                  alt="Training at Rapid Recovery Elite Training Center" 
                  loading="lazy"
                  width="800"

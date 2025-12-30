@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import { onMount } from 'svelte';
 
     onMount(() => {
@@ -29,7 +30,7 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<section class="hero pt-hero" id="home" aria-labelledby="hero-title" style="background-image: url('/images/business_banner.jpg');">
+<section class="hero pt-hero" id="home" aria-labelledby="hero-title" style="background-image: url('{base}/images/business_banner.jpg');">
     <div class="hero-overlay" aria-hidden="true"></div>
     
     <div class="hero-content">

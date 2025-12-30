@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import { onMount } from 'svelte';
     import ContactForm from '$lib/components/ContactForm.svelte';
 
@@ -30,7 +31,7 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<section class="hero pt-hero" id="home" aria-labelledby="hero-title" style="background-image: url('/images/rapid_recovery_banner.jpg'); background-position: center 20%;">
+<section class="hero pt-hero" id="home" aria-labelledby="hero-title" style="background-image: url('{base}/images/rapid_recovery_banner.jpg'); background-position: center 20%;">
     <div class="hero-overlay" aria-hidden="true"></div>
     
     <div class="hero-content">
@@ -57,7 +58,7 @@
 <section class="about pt-about" id="about" aria-labelledby="about-title">
     <div class="about-grid">
         <div class="about-image reveal">
-            <img src="/images/rapid_recovery_manual_therapy.jpg" 
+            <img src="{base}/images/rapid_recovery_manual_therapy.jpg" 
                  alt="Dr. Taylor Foster providing physical therapy treatment" 
                  loading="lazy"
                  width="800"
@@ -197,7 +198,7 @@
     </div>
     <div class="doctor-profile reveal">
         <div class="doctor-image">
-            <img src="/images/rapid_recovery_profile_pic.jpg" alt="Dr. Taylor Foster, DPT, CSCS" loading="lazy">
+            <img src="{base}/images/rapid_recovery_profile_pic.jpg" alt="Dr. Taylor Foster, DPT, CSCS" loading="lazy">
         </div>
         <div class="doctor-bio">
             <h3>Dr. Taylor Foster</h3>

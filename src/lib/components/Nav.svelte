@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import { page } from '$app/stores';
     import { onMount } from 'svelte';
 
@@ -69,7 +70,7 @@
     <nav class="nav" class:scrolled aria-label="Main navigation">
         <!-- Logo -->
         <a href="/" class="nav-logo" aria-label="Rapid Recovery: Elite Training Center - Home">
-            <img src="/images/logo2.png" alt="Rapid Recovery" class="logo-img" />
+            <img src="{base}/images/logo2.png" alt="Rapid Recovery" class="logo-img" />
         </a>
 
         <!-- Desktop Navigation -->

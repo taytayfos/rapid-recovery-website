@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import { onMount } from 'svelte';
     import ContactForm from '$lib/components/ContactForm.svelte';
 
@@ -75,7 +76,7 @@
 <section class="about" id="about" aria-labelledby="about-title">
     <div class="about-grid">
         <div class="about-image reveal">
-            <img src="/images/about_legs.jpg" 
+            <img src="{base}/images/about_legs.jpg" 
                  alt="Interior view of Rapid Recovery gym showing professional weight training equipment" 
                  loading="lazy"
                  width="800"
@@ -277,7 +278,7 @@
     <div class="owners-grid">
         <div class="owner-profile reveal">
             <div class="owner-image">
-                <img src="/images/rapid_recovery_profile_pic.jpg" alt="Dr. Taylor Foster" loading="lazy">
+                <img src="{base}/images/rapid_recovery_profile_pic.jpg" alt="Dr. Taylor Foster" loading="lazy">
             </div>
             <div class="owner-bio">
                 <h3>Dr. Taylor Foster, DPT, CSCS</h3>
@@ -297,7 +298,7 @@
         </div>
         <div class="owner-profile reveal">
             <div class="owner-image">
-                <img src="/images/hailie_profile_pic.jpg" alt="Hailie Foster" loading="lazy" style="object-position: 30% center;">
+                <img src="{base}/images/hailie_profile_pic.jpg" alt="Hailie Foster" loading="lazy" style="object-position: 30% center;">
             </div>
             <div class="owner-bio">
                 <h3>Hailie Foster, PA-C</h3>

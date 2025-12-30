@@ -11,7 +11,10 @@ const config = {
 			strict: true
 		}),
 		paths: {
-			base: process.argv.includes('dev') ? '' : '/rapid-recovery-website'
+			base: '/rapid-recovery-website'
+		},
+		prerender: {
+			handleHttpError: 'warn'
 		}
 	}
 };

@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     export let variant = 'gym'; // 'gym' or 'pt'
 </script>
 
@@ -7,7 +8,7 @@
         <div class="footer-info">
             <!-- Logo -->
             <a href="/" class="footer-logo">
-                <img src="/images/logo2.png" alt="Rapid Recovery" class="footer-logo-img" />
+                <img src="{base}/images/logo2.png" alt="Rapid Recovery" class="footer-logo-img" />
             </a>
             <p class="footer-subtitle">
                 {#if variant === 'pt'}
