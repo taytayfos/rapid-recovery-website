@@ -44,7 +44,7 @@
         </p>
         <div class="hero-buttons">
             <a href="#benefits" class="btn btn-primary">Learn More</a>
-            <a href="/#contact" class="btn btn-secondary">Join Network</a>
+            <a href="{base}/#contact" class="btn btn-secondary">Join Network</a>
         </div>
     </div>
     <div class="hero-scroll" aria-hidden="true">
@@ -79,7 +79,7 @@
             </ul>
         </div>
         <div class="business-cta">
-            <a href="/#contact" class="btn btn-primary">Join the Network</a>
+            <a href="{base}/#contact" class="btn btn-primary">Join the Network</a>
         </div>
     </div>
 </section>
@@ -101,7 +101,7 @@
             Want to be featured? Join the Business Network and get your business in front of hundreds of motivated, success-driven individuals.
         </p>
         <div class="cta-center">
-            <a href="/#contact" class="btn btn-primary">Get Featured</a>
+            <a href="{base}/#contact" class="btn btn-primary">Get Featured</a>
         </div>
     </div>
 </section>
@@ -115,8 +115,8 @@
     <div class="reviews-content reveal">
         <p class="reviews-intro">Connect with like-minded entrepreneurs and grow your business within our community.</p>
         <div class="reviews-cta">
-            <a href="/#contact" class="btn btn-primary">Join the Network</a>
-            <a href="/#memberships" class="btn btn-secondary">Become a Member</a>
+            <a href="{base}/#contact" class="btn btn-primary">Join the Network</a>
+            <a href="{base}/#memberships" class="btn btn-secondary">Become a Member</a>
         </div>
     </div>
 </section>

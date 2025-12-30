@@ -80,7 +80,7 @@
             <p><em>*Pricing is determined by the media team. Request a quote for your vision. Member spotlights and initial "Get to Know the Members" features are free of charge.</em></p>
         </div>
         <div class="media-cta">
-            <a href="/#contact" class="btn btn-primary">Connect with Media Team</a>
+            <a href="{base}/#contact" class="btn btn-primary">Connect with Media Team</a>
         </div>
     </div>
 </section>

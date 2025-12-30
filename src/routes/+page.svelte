@@ -126,28 +126,28 @@
         <h2 class="section-title">Elite Level Everything</h2>
     </div>
     <div class="features-grid">
-        <a href="/facilities#equipment" class="feature-card reveal">
+        <a href="{base}/facilities#equipment" class="feature-card reveal">
             <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=600&q=80" alt="Hand-picked equipment">
             <div class="feature-overlay">
                 <h3>Hand Picked Equipment</h3>
                 <p>Custom pieces from around the world</p>
             </div>
         </a>
-        <a href="/facilities#turf" class="feature-card reveal">
+        <a href="{base}/facilities#turf" class="feature-card reveal">
             <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80" alt="Turf area">
             <div class="feature-overlay">
                 <h3>Generous Turf Area</h3>
                 <p>150 sq ft dedicated movement space</p>
             </div>
         </a>
-        <a href="/facilities#recovery" class="feature-card reveal">
+        <a href="{base}/facilities#recovery" class="feature-card reveal">
             <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" alt="Recovery services">
             <div class="feature-overlay">
                 <h3>Recovery Services</h3>
                 <p>Cold plunge, saunas, and more</p>
             </div>
         </a>
-        <a href="/training" class="feature-card reveal">
+        <a href="{base}/training" class="feature-card reveal">
             <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80" alt="Personal training">
             <div class="feature-overlay">
                 <h3>Elite Personal Training</h3>

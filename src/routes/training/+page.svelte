@@ -43,7 +43,7 @@
             Hand-selected coaches. Proven results.
         </p>
         <div class="hero-buttons">
-            <a href="/#contact" class="btn btn-primary">Get Started</a>
+            <a href="{base}/#contact" class="btn btn-primary">Get Started</a>
             <a href="#opportunities" class="btn btn-secondary">Become a Trainer</a>
         </div>
     </div>
@@ -119,7 +119,7 @@
             <p class="about-text">
                 Applications can be submitted via the contact form below. Only serious, qualified applicants will be considered.
             </p>
-            <a href="/#contact" class="btn btn-primary">Apply Now</a>
+            <a href="{base}/#contact" class="btn btn-primary">Apply Now</a>
         </div>
     </div>
 </section>
@@ -133,8 +133,8 @@
     <div class="reviews-content reveal">
         <p class="reviews-intro">Connect with one of our elite trainers and take your performance to the next level.</p>
         <div class="reviews-cta">
-            <a href="/#contact" class="btn btn-primary">Get Started</a>
-            <a href="/#memberships" class="btn btn-secondary">View Memberships</a>
+            <a href="{base}/#contact" class="btn btn-primary">Get Started</a>
+            <a href="{base}/#memberships" class="btn btn-secondary">View Memberships</a>
         </div>
     </div>
 </section>

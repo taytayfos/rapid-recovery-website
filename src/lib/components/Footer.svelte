@@ -7,7 +7,7 @@
     <div class="footer-main">
         <div class="footer-info">
             <!-- Logo -->
-            <a href="/" class="footer-logo">
+            <a href="{base}/" class="footer-logo">
                 <img src="{base}/images/logo2.png" alt="Rapid Recovery" class="footer-logo-img" />
             </a>
             <p class="footer-subtitle">
@@ -41,33 +41,33 @@
             <div class="footer-nav-column">
                 <h4>The Gym</h4>
                 <ul>
-                    <li><a href="/facilities">Facilities</a></li>
-                    <li><a href="/facilities#equipment">Equipment</a></li>
-                    <li><a href="/facilities#recovery">Recovery</a></li>
-                    <li><a href="/#memberships">Memberships</a></li>
+                    <li><a href="{base}/facilities">Facilities</a></li>
+                    <li><a href="{base}/facilities#equipment">Equipment</a></li>
+                    <li><a href="{base}/facilities#recovery">Recovery</a></li>
+                    <li><a href="{base}/#memberships">Memberships</a></li>
                 </ul>
             </div>
             <div class="footer-nav-column">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="/training">Personal Training</a></li>
-                    <li><a href="/pt">Physical Therapy</a></li>
+                    <li><a href="{base}/training">Personal Training</a></li>
+                    <li><a href="{base}/pt">Physical Therapy</a></li>
                 </ul>
             </div>
             <div class="footer-nav-column">
                 <h4>Community</h4>
                 <ul>
-                    <li><a href="/media">Media & Podcast</a></li>
-                    <li><a href="/business-network">Business Network</a></li>
-                    <li><a href="/shop">Shop</a></li>
+                    <li><a href="{base}/media">Media & Podcast</a></li>
+                    <li><a href="{base}/business-network">Business Network</a></li>
+                    <li><a href="{base}/shop">Shop</a></li>
                 </ul>
             </div>
             <div class="footer-nav-column">
                 <h4>Info</h4>
                 <ul>
-                    <li><a href="/#contact">Contact</a></li>
-                    <li><a href="/privacy-policy">Privacy Policy</a></li>
-                    <li><a href="/cancellations">Cancellations</a></li>
+                    <li><a href="{base}/#contact">Contact</a></li>
+                    <li><a href="{base}/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="{base}/cancellations">Cancellations</a></li>
                 </ul>
             </div>
         </div>

@@ -44,7 +44,7 @@
         </p>
         <div class="hero-buttons">
             <a href="#offerings" class="btn btn-primary">View Offerings</a>
-            <a href="/#contact" class="btn btn-secondary">Contact Us</a>
+            <a href="{base}/#contact" class="btn btn-secondary">Contact Us</a>
         </div>
     </div>
     <div class="hero-scroll" aria-hidden="true">
@@ -98,7 +98,7 @@
             <p>T-Shirts, Hoodies, Tank Tops, Stringers, Hats, Gym Bags, Shaker Bottles, and more. New items added regularly.</p>
         </div>
         <div class="cta-center">
-            <a href="/#contact" class="btn btn-primary">Inquire About Merchandise</a>
+            <a href="{base}/#contact" class="btn btn-primary">Inquire About Merchandise</a>
         </div>
     </div>
 </section>
@@ -116,7 +116,7 @@
             <p><strong>Saturday - Sunday:</strong> 8:00am - 6:00pm</p>
         </div>
         <div class="reviews-cta">
-            <a href="/#contact" class="btn btn-primary">Contact Us</a>
+            <a href="{base}/#contact" class="btn btn-primary">Contact Us</a>
         </div>
     </div>
 </section>

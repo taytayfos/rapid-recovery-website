@@ -44,7 +44,7 @@
         </p>
         <div class="hero-buttons">
             <a href="#equipment" class="btn btn-primary">Explore</a>
-            <a href="/#contact" class="btn btn-secondary">Book Tour</a>
+            <a href="{base}/#contact" class="btn btn-secondary">Book Tour</a>
         </div>
     </div>
     <div class="hero-scroll" aria-hidden="true">
@@ -144,7 +144,7 @@
         </div>
     </div>
     <div class="recovery-cta reveal">
-        <a href="/pt" class="btn btn-primary">Learn About Physical Therapy Services</a>
+        <a href="{base}/pt" class="btn btn-primary">Learn About Physical Therapy Services</a>
     </div>
 </section>
 
@@ -189,8 +189,8 @@
     <div class="reviews-content reveal">
         <p class="reviews-intro">Book a free tour and see why Rapid Recovery is unlike any gym you've experienced.</p>
         <div class="reviews-cta">
-            <a href="/#contact" class="btn btn-primary">Book Free Tour</a>
-            <a href="/#memberships" class="btn btn-secondary">View Memberships</a>
+            <a href="{base}/#contact" class="btn btn-primary">Book Free Tour</a>
+            <a href="{base}/#memberships" class="btn btn-secondary">View Memberships</a>
         </div>
     </div>
 </section>

@@ -240,7 +240,7 @@
         </div>
 
         <div class="privacy-cta">
-            <a href="/privacy-policy" class="btn btn-secondary">View Full Privacy Policy</a>
+            <a href="{base}/privacy-policy" class="btn btn-secondary">View Full Privacy Policy</a>
         </div>
     </div>
 </section>

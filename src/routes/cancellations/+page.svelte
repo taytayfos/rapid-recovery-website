@@ -81,7 +81,7 @@
 
             <div class="legal-back">
                 <a href="/" class="btn btn-secondary">Back to Home</a>
-                <a href="/#memberships" class="btn btn-primary">View Memberships</a>
+                <a href="{base}/#memberships" class="btn btn-primary">View Memberships</a>
             </div>
 
         </div>

@@ -69,7 +69,7 @@
 <header>
     <nav class="nav" class:scrolled aria-label="Main navigation">
         <!-- Logo -->
-        <a href="/" class="nav-logo" aria-label="Rapid Recovery: Elite Training Center - Home">
+        <a href="{base}/" class="nav-logo" aria-label="Rapid Recovery: Elite Training Center - Home">
             <img src="{base}/images/logo2.png" alt="Rapid Recovery" class="logo-img" />
         </a>
 
@@ -90,11 +90,11 @@
                     </svg>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li role="none"><a href="/#about" role="menuitem" on:click={() => activeDropdown = null}>Our Mission</a></li>
-                    <li role="none"><a href="/#memberships" role="menuitem" on:click={() => activeDropdown = null}>Memberships</a></li>
-                    <li role="none"><a href="/#owners" role="menuitem" on:click={() => activeDropdown = null}>Meet the Owners</a></li>
-                    <li role="none"><a href="/#location" role="menuitem" on:click={() => activeDropdown = null}>Location</a></li>
-                    <li role="none"><a href="/#contact" role="menuitem" on:click={() => activeDropdown = null}>Contact</a></li>
+                    <li role="none"><a href="{base}/#about" role="menuitem" on:click={() => activeDropdown = null}>Our Mission</a></li>
+                    <li role="none"><a href="{base}/#memberships" role="menuitem" on:click={() => activeDropdown = null}>Memberships</a></li>
+                    <li role="none"><a href="{base}/#owners" role="menuitem" on:click={() => activeDropdown = null}>Meet the Owners</a></li>
+                    <li role="none"><a href="{base}/#location" role="menuitem" on:click={() => activeDropdown = null}>Location</a></li>
+                    <li role="none"><a href="{base}/#contact" role="menuitem" on:click={() => activeDropdown = null}>Contact</a></li>
                 </ul>
             </li>
 
@@ -113,11 +113,11 @@
                     </svg>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li role="none"><a href="/facilities" role="menuitem" on:click={() => activeDropdown = null}>Facilities</a></li>
-                    <li role="none"><a href="/facilities#equipment" role="menuitem" on:click={() => activeDropdown = null}>Equipment</a></li>
-                    <li role="none"><a href="/facilities#turf" role="menuitem" on:click={() => activeDropdown = null}>Turf Area</a></li>
-                    <li role="none"><a href="/facilities#recovery" role="menuitem" on:click={() => activeDropdown = null}>Recovery</a></li>
-                    <li role="none"><a href="/facilities#posing-room" role="menuitem" on:click={() => activeDropdown = null}>Posing Room</a></li>
+                    <li role="none"><a href="{base}/facilities" role="menuitem" on:click={() => activeDropdown = null}>Facilities</a></li>
+                    <li role="none"><a href="{base}/facilities#equipment" role="menuitem" on:click={() => activeDropdown = null}>Equipment</a></li>
+                    <li role="none"><a href="{base}/facilities#turf" role="menuitem" on:click={() => activeDropdown = null}>Turf Area</a></li>
+                    <li role="none"><a href="{base}/facilities#recovery" role="menuitem" on:click={() => activeDropdown = null}>Recovery</a></li>
+                    <li role="none"><a href="{base}/facilities#posing-room" role="menuitem" on:click={() => activeDropdown = null}>Posing Room</a></li>
                 </ul>
             </li>
 
@@ -136,8 +136,8 @@
                     </svg>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li role="none"><a href="/training" role="menuitem" on:click={() => activeDropdown = null}>Personal Training</a></li>
-                    <li role="none"><a href="/pt" role="menuitem" on:click={() => activeDropdown = null}>Physical Therapy</a></li>
+                    <li role="none"><a href="{base}/training" role="menuitem" on:click={() => activeDropdown = null}>Personal Training</a></li>
+                    <li role="none"><a href="{base}/pt" role="menuitem" on:click={() => activeDropdown = null}>Physical Therapy</a></li>
                 </ul>
             </li>
 
@@ -156,15 +156,15 @@
                     </svg>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li role="none"><a href="/media" role="menuitem" on:click={() => activeDropdown = null}>Media & Podcast</a></li>
-                    <li role="none"><a href="/business-network" role="menuitem" on:click={() => activeDropdown = null}>Business Network</a></li>
-                    <li role="none"><a href="/shop" role="menuitem" on:click={() => activeDropdown = null}>Shop</a></li>
+                    <li role="none"><a href="{base}/media" role="menuitem" on:click={() => activeDropdown = null}>Media & Podcast</a></li>
+                    <li role="none"><a href="{base}/business-network" role="menuitem" on:click={() => activeDropdown = null}>Business Network</a></li>
+                    <li role="none"><a href="{base}/shop" role="menuitem" on:click={() => activeDropdown = null}>Shop</a></li>
                 </ul>
             </li>
         </ul>
 
         <!-- CTA Button -->
-        <a href="/#memberships" class="nav-cta">Join Now</a>
+        <a href="{base}/#memberships" class="nav-cta">Join Now</a>
 
         <!-- Mobile Menu Toggle -->
         <button 
@@ -192,47 +192,47 @@
     <div class="mobile-menu-content">
         <!-- Home -->
         <div class="mobile-section">
-            <a href="/" class="mobile-link" on:click={closeMobileMenu}>Home</a>
+            <a href="{base}/" class="mobile-link" on:click={closeMobileMenu}>Home</a>
         </div>
 
         <!-- About -->
         <div class="mobile-section">
             <span class="mobile-section-title">About</span>
-            <a href="/#about" class="mobile-link" on:click={closeMobileMenu}>Our Mission</a>
-            <a href="/#memberships" class="mobile-link" on:click={closeMobileMenu}>Memberships</a>
-            <a href="/#owners" class="mobile-link" on:click={closeMobileMenu}>Meet the Owners</a>
-            <a href="/#location" class="mobile-link" on:click={closeMobileMenu}>Location</a>
-            <a href="/#contact" class="mobile-link" on:click={closeMobileMenu}>Contact</a>
+            <a href="{base}/#about" class="mobile-link" on:click={closeMobileMenu}>Our Mission</a>
+            <a href="{base}/#memberships" class="mobile-link" on:click={closeMobileMenu}>Memberships</a>
+            <a href="{base}/#owners" class="mobile-link" on:click={closeMobileMenu}>Meet the Owners</a>
+            <a href="{base}/#location" class="mobile-link" on:click={closeMobileMenu}>Location</a>
+            <a href="{base}/#contact" class="mobile-link" on:click={closeMobileMenu}>Contact</a>
         </div>
 
         <!-- The Gym -->
         <div class="mobile-section">
             <span class="mobile-section-title">The Gym</span>
-            <a href="/facilities" class="mobile-link" on:click={closeMobileMenu}>Facilities</a>
-            <a href="/facilities#equipment" class="mobile-link" on:click={closeMobileMenu}>Equipment</a>
-            <a href="/facilities#turf" class="mobile-link" on:click={closeMobileMenu}>Turf Area</a>
-            <a href="/facilities#recovery" class="mobile-link" on:click={closeMobileMenu}>Recovery</a>
-            <a href="/facilities#posing-room" class="mobile-link" on:click={closeMobileMenu}>Posing Room</a>
+            <a href="{base}/facilities" class="mobile-link" on:click={closeMobileMenu}>Facilities</a>
+            <a href="{base}/facilities#equipment" class="mobile-link" on:click={closeMobileMenu}>Equipment</a>
+            <a href="{base}/facilities#turf" class="mobile-link" on:click={closeMobileMenu}>Turf Area</a>
+            <a href="{base}/facilities#recovery" class="mobile-link" on:click={closeMobileMenu}>Recovery</a>
+            <a href="{base}/facilities#posing-room" class="mobile-link" on:click={closeMobileMenu}>Posing Room</a>
         </div>
 
         <!-- Services -->
         <div class="mobile-section">
             <span class="mobile-section-title">Services</span>
-            <a href="/training" class="mobile-link" on:click={closeMobileMenu}>Personal Training</a>
-            <a href="/pt" class="mobile-link" on:click={closeMobileMenu}>Physical Therapy</a>
+            <a href="{base}/training" class="mobile-link" on:click={closeMobileMenu}>Personal Training</a>
+            <a href="{base}/pt" class="mobile-link" on:click={closeMobileMenu}>Physical Therapy</a>
         </div>
 
         <!-- Community -->
         <div class="mobile-section">
             <span class="mobile-section-title">Community</span>
-            <a href="/media" class="mobile-link" on:click={closeMobileMenu}>Media & Podcast</a>
-            <a href="/business-network" class="mobile-link" on:click={closeMobileMenu}>Business Network</a>
-            <a href="/shop" class="mobile-link" on:click={closeMobileMenu}>Shop</a>
+            <a href="{base}/media" class="mobile-link" on:click={closeMobileMenu}>Media & Podcast</a>
+            <a href="{base}/business-network" class="mobile-link" on:click={closeMobileMenu}>Business Network</a>
+            <a href="{base}/shop" class="mobile-link" on:click={closeMobileMenu}>Shop</a>
         </div>
 
         <!-- CTA -->
         <div class="mobile-cta">
-            <a href="/#memberships" class="btn btn-primary" on:click={closeMobileMenu}>Join Now</a>
+            <a href="{base}/#memberships" class="btn btn-primary" on:click={closeMobileMenu}>Join Now</a>
         </div>
     </div>
 </nav>
