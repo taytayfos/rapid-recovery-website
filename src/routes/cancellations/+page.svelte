@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
 </script>
 
 <svelte:head>
@@ -80,7 +81,7 @@
             </div>
 
             <div class="legal-back">
-                <a href="/" class="btn btn-secondary">Back to Home</a>
+                <a href="{base}/" class="btn btn-secondary">Back to Home</a>
                 <a href="{base}/#memberships" class="btn btn-primary">View Memberships</a>
             </div>
 

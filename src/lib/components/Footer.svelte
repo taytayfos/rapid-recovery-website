@@ -30,9 +30,12 @@
                 </p>
             </div>
             <div class="footer-social">
-                <a href="#" class="social-link" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer">IG</a>
-                <a href="#" class="social-link" aria-label="Follow us on Facebook" target="_blank" rel="noopener noreferrer">FB</a>
-                <a href="#" class="social-link" aria-label="Subscribe on YouTube" target="_blank" rel="noopener noreferrer">YT</a>
+                {#if variant === 'pt'}
+                <a href="https://www.instagram.com/rapidrecoverypt" class="social-link" aria-label="Follow Rapid Recovery PT on Instagram" target="_blank" rel="noopener noreferrer">IG</a>
+                {:else}
+                <a href="https://www.instagram.com/rr_elitetrainingcenter" class="social-link" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer">IG</a>
+                {/if}
+                <a href="https://youtube.com/@taytayfos_hayhayfos" class="social-link" aria-label="Subscribe on YouTube" target="_blank" rel="noopener noreferrer">YT</a>
             </div>
         </div>
 

@@ -2,8 +2,18 @@
     import { base } from '$app/paths';
     import { onMount } from 'svelte';
     import ContactForm from '$lib/components/ContactForm.svelte';
+    import Dialog from '$lib/components/Dialog.svelte';
+
+    let consultDialog;
 
     onMount(() => {
+        // Show free consult popup after 3 seconds
+        const timeout = setTimeout(() => {
+            if (consultDialog) {
+                consultDialog.showModal();
+            }
+        }, 3000);
+
         const checkReveal = () => {
             const windowHeight = window.innerHeight;
             const revealPoint = 120;
@@ -21,6 +31,7 @@
 
         return () => {
             window.removeEventListener('scroll', checkReveal);
+            clearTimeout(timeout);
         };
     });
 </script>
@@ -45,7 +56,7 @@
         </p>
         <div class="hero-buttons">
             <a href="#services" class="btn btn-primary">Our Services</a>
-            <a href="#contact" class="btn btn-secondary">Book Session</a>
+            <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book Session</a>
         </div>
     </div>
     <div class="hero-scroll" aria-hidden="true">
@@ -115,7 +126,67 @@
         
         <div class="service-card reveal">
             <h3>Return to Sport Protocol</h3>
-            <p>Structured programs designed to safely and effectively return athletes to competition at full capacity.</p>
+            <p>A comprehensive, phased approach to getting athletes back to competition safely and confidently. From post-injury rehab to performance testing, we ensure you're not just "cleared" — you're ready.</p>
+        </div>
+
+        <div class="service-card reveal">
+            <h3>General Recovery & Performance</h3>
+            <p>No injuries? No problem. The best time to work on your body is before something goes wrong. Performance-focused manual therapy sessions for individuals without current injuries. These sessions are designed to improve recovery, mobility, tissue quality, and overall performance. If you're training hard, feeling beat up, or simply want to stay ahead of potential issues, these sessions help you move better, feel better, and keep performing at your best.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Detailed Service Descriptions -->
+<section class="service-descriptions" id="service-details">
+    <div class="section-header reveal">
+        <p class="section-tag">Services</p>
+        <h2 class="section-title">What to Expect</h2>
+    </div>
+
+    <div class="descriptions-container reveal">
+        <div class="service-detail">
+            <h3>Initial Assessment: Comprehensive Evaluation for New Beginnings</h3>
+            <p>At Rapid Recovery: Sports Therapy & Performance, the Initial Assessment is more than just a standard evaluation. This session is designed to lay the groundwork for your tailored recovery and performance enhancement plan.</p>
+            <h4>What to Expect:</h4>
+            <p><strong>Personalized Consultation:</strong> Dr. Foster begins with a detailed discussion about your medical history, current injuries, and performance goals. This conversation is crucial for understanding your journey and aspirations.</p>
+            <p><strong>Physical Evaluation:</strong> Expect a full physical examination where Dr. Foster assesses your mobility, strength, and any specific areas of concern. This hands-on evaluation is pivotal in diagnosing the root causes of your discomfort or performance barriers.</p>
+            <p><strong>Movement Analysis:</strong> Utilizing his expertise in biomechanics, Dr. Foster will analyze your movement patterns, especially those relevant to your sport or physical activities. This analysis helps in identifying inefficiencies and potential areas for improvement.</p>
+            <p>Based on the findings from your assessment, you'll receive initial insights and recommendations tailored to your condition and goals, customized corrective exercises designed to start addressing your needs immediately, and hands-on manual therapy treatment to accelerate the rehabilitation process.</p>
+            <p>The Initial Assessment is not just about diagnosing issues; it's about crafting a personalized plan that aligns with your goals. Dr. Foster will outline the next steps, including follow-up sessions, treatment strategies, and any recommended changes to your training regimen.</p>
+        </div>
+
+        <div class="service-detail">
+            <h3>Follow-Up: Sustained Progress Towards Your Goals</h3>
+            <p>Follow-Up appointments are a critical component of your personalized treatment plan. Under the expert guidance of Dr. Taylor Foster, these sessions are designed to ensure you remain on track towards achieving and surpassing your health and performance objectives.</p>
+            <p>Each Follow-Up visit is an opportunity to assess progress, adjust treatments, and refine strategies to better align with your evolving needs. These sessions will include a progress review where Dr. Foster will evaluate your improvement since the last session, discussing any changes in your condition or performance.</p>
+            <p>Based on your progress, treatments may be adjusted to enhance effectiveness. This could include introducing new techniques or advancing current exercises to challenge your body appropriately and ensure continued improvement. Follow-up sessions will also include ongoing hands-on treatment, utilizing techniques best suited to your current stage of recovery and performance goals.</p>
+        </div>
+
+        <div class="service-detail">
+            <h3>General Recovery & Performance: Targeted Hands-on Tissue Work</h3>
+            <p>A focused approach to hands-on treatment, designed for individuals seeking immediate relief from muscle tension, discomfort, or to aid in their recovery process. Dr. Taylor Foster utilizes his expertise in various manual therapy techniques to provide targeted care that supports muscle health and enhances recovery. This service emphasizes direct, hands-on techniques to address specific areas of concern, without the preliminary diagnostic evaluation included in other services. Therefore, this service is not for injuries requiring an evaluation.</p>
+            <p>Clients can look forward to personalized treatment, expert techniques, and enhanced recovery. Each session is tailored to your immediate needs, focusing on areas of tension or discomfort as identified by you and Dr. Foster. A range of hands-on techniques may or may not be utilized, such as deep tissue massage, IASTM, trigger point release, cupping, dry needling, and myofascial release, to effectively target and treat soft tissue concerns.</p>
+            <p>This service is ideal for clients who do not require a full assessment but still seek the benefits of manual therapy, are looking to enhance their recovery process between training sessions or competitions, and have no injuries but are looking to promote performance and general wellbeing.</p>
+        </div>
+
+        <div class="service-detail">
+            <h3>Elite Level Personal Training & Biomechanical Analysis</h3>
+            <p>Elevate your performance through precision and insight by training directly with Dr. Taylor Foster.</p>
+            <p>Ever feel like when you're training that you just aren't able to connect with a muscle or get a "pump" like you should?</p>
+            <p>This cutting-edge approach is designed to refine your training efficiency and enhance your performance. Under the guidance of Dr. Taylor Foster, this analysis goes beyond traditional coaching and personal training, providing a deep dive into how your body moves, identifies inefficiencies, and devises strategies to correct them.</p>
+            <p><strong>Detailed Movement Assessment:</strong> Dr. Foster will conduct an in-depth analysis of your movement patterns during exercise and sport-specific activities. By examining your movements, Dr. Foster will identify any biomechanical inefficiencies that may be hindering your performance or predisposing you to injury. Based on this assessment, you'll receive a personalized plan that addresses identified inefficiencies. This plan may include corrective exercises, technique adjustments, and other strategies to improve your biomechanical efficiency.</p>
+        </div>
+
+        <div class="service-detail">
+            <h3>Free Consult - Discover How We Can Help – At No Cost to You</h3>
+            <p>Rapid Recovery: Sports Therapy & Performance is committed to your health and performance. That's why we offer a complimentary 15-minute consultation with Dr. Taylor Foster, designed to provide you with a direct insight into how our specialized services can meet your unique needs.</p>
+            <h4>What to Expect During Your Free Consult:</h4>
+            <p>This no-obligation consultation is your first step towards achieving your health and performance goals. This consult can be in-person or over the phone and here's what it entails:</p>
+            <p><strong>Personal Introduction:</strong> A chance to meet Dr. Taylor Foster and learn more about his expertise and approach to physical therapy and performance improvement.</p>
+            <p><strong>Discussion of Your Needs:</strong> Share your concerns, goals, and any specific issues you're facing. Whether it's recovery from injury, enhancing performance, or addressing chronic pain, this is the time to outline what you're seeking.</p>
+            <p><strong>Professional Insight:</strong> Dr. Foster will provide initial thoughts on how your goals can be met through our services, whether it's through targeted physical therapy, elite level personal training & biomechanical analysis, or any of our specialized offerings.</p>
+            <p><strong>Next Steps:</strong> Gain understanding of the potential next steps, including recommendations for specific services or treatments that can benefit you. If Dr. Foster isn't certain he can help you he will be straight forward with you and tell you as well as refer you to someone that he believes could help you.</p>
+            <p>This consultation is entirely free, offering you a chance to explore your options without any commitment.</p>
         </div>
     </div>
 </section>
@@ -132,61 +203,104 @@
     
     <div class="pricing-grid">
         <article class="pricing-card reveal">
-            <h3 class="pricing-name">60-Minute Session</h3>
-            <p class="pricing-subtitle">Non-Member</p>
-            <p class="pricing-price">$200</p>
+            <h3 class="pricing-name">Free Consultation</h3>
+            <p class="pricing-subtitle">15 Minutes</p>
+            <p class="pricing-price">FREE</p>
             <ul class="pricing-features">
-                <li>Full assessment and treatment</li>
-                <li>Hands-on manual therapy</li>
-                <li>Custom exercise program</li>
-                <li>Recovery tool access</li>
+                <li>In-person or phone</li>
+                <li>Discuss your needs</li>
+                <li>Learn about our services</li>
+                <li>No obligation</li>
             </ul>
-            <a href="#contact" class="btn btn-secondary">Book Session</a>
+            <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book Free Consult</a>
         </article>
 
         <article class="pricing-card featured reveal">
-            <span class="pricing-badge">Best Value</span>
-            <h3 class="pricing-name">60-Minute Session</h3>
-            <p class="pricing-subtitle">Gym Member</p>
-            <p class="pricing-price">$150</p>
+            <span class="pricing-badge">Most Popular</span>
+            <h3 class="pricing-name">Initial Assessment</h3>
+            <p class="pricing-subtitle">60 Minutes</p>
+            <p class="pricing-price">$200 <span class="price-label">member</span></p>
+            <p class="pricing-price-alt">$250 <span class="price-label">non-member (day pass included)</span></p>
             <ul class="pricing-features">
-                <li>Full assessment and treatment</li>
+                <li>Comprehensive evaluation</li>
                 <li>Hands-on manual therapy</li>
                 <li>Custom exercise program</li>
-                <li>Recovery tool access</li>
-                <li>$50 member savings</li>
+                <li>Treatment plan development</li>
             </ul>
-            <a href="#contact" class="btn btn-primary">Book Session</a>
+            <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Now</a>
         </article>
 
         <article class="pricing-card reveal">
-            <h3 class="pricing-name">30-Minute Session</h3>
-            <p class="pricing-subtitle">Non-Member</p>
-            <p class="pricing-price">$149</p>
+            <h3 class="pricing-name">Follow-Up Session</h3>
+            <p class="pricing-subtitle">30 Minutes</p>
+            <p class="pricing-price">$125 <span class="price-label">member</span></p>
+            <p class="pricing-price-alt">$175 <span class="price-label">non-member (day pass included)</span></p>
             <ul class="pricing-features">
-                <li>Focused treatment</li>
-                <li>Follow-up sessions</li>
-                <li>Targeted intervention</li>
+                <li>Progress review</li>
+                <li>Continued treatment</li>
+                <li>Program adjustments</li>
             </ul>
-            <a href="#contact" class="btn btn-secondary">Book Session</a>
+            <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book Now</a>
         </article>
 
         <article class="pricing-card reveal">
-            <h3 class="pricing-name">30-Minute Session</h3>
-            <p class="pricing-subtitle">Gym Member</p>
-            <p class="pricing-price">$99</p>
+            <h3 class="pricing-name">Extended Follow-Up</h3>
+            <p class="pricing-subtitle">45 Minutes</p>
+            <p class="pricing-price">$175 <span class="price-label">member</span></p>
+            <p class="pricing-price-alt">$225 <span class="price-label">non-member (day pass included)</span></p>
             <ul class="pricing-features">
-                <li>Focused treatment</li>
-                <li>Follow-up sessions</li>
-                <li>Targeted intervention</li>
-                <li>$50 member savings</li>
+                <li>Extended treatment time</li>
+                <li>Complex case management</li>
+                <li>Comprehensive hands-on work</li>
             </ul>
-            <a href="#contact" class="btn btn-secondary">Book Session</a>
+            <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book Now</a>
+        </article>
+
+        <article class="pricing-card reveal">
+            <h3 class="pricing-name">General Recovery & Performance</h3>
+            <p class="pricing-subtitle">30 Minutes</p>
+            <p class="pricing-price">$100 <span class="price-label">member</span></p>
+            <p class="pricing-price-alt">$150 <span class="price-label">non-member (day pass included)</span></p>
+            <ul class="pricing-features">
+                <li>Non-injury focused</li>
+                <li>Targeted manual therapy</li>
+                <li>Performance optimization</li>
+                <li>Recovery enhancement</li>
+            </ul>
+            <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book Now</a>
+        </article>
+
+        <article class="pricing-card reveal">
+            <h3 class="pricing-name">Elite Training & Biomechanical Analysis</h3>
+            <p class="pricing-subtitle">90 Minutes</p>
+            <p class="pricing-price">$250 <span class="price-label">member</span></p>
+            <p class="pricing-price-alt">$300 <span class="price-label">non-member (day pass included)</span></p>
+            <ul class="pricing-features">
+                <li>Train with Dr. Foster</li>
+                <li>Movement analysis</li>
+                <li>Corrective strategies</li>
+                <li>Personalized programming</li>
+            </ul>
+            <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book Now</a>
         </article>
     </div>
 
     <div class="pricing-note reveal">
         <p><strong>Note:</strong> Payment is due at time of service. We do not accept insurance directly but can provide documentation for out-of-network reimbursement upon request.</p>
+    </div>
+</section>
+
+<!-- Google Reviews Section -->
+<section class="reviews-section" id="reviews">
+    <div class="section-header reveal">
+        <p class="section-tag">Testimonials</p>
+        <h2 class="section-title">Patient Reviews</h2>
+    </div>
+    <div class="reviews-content reveal">
+        <p class="reviews-intro">See what our patients are saying about Rapid Recovery: Sports Therapy & Performance</p>
+        <div class="reviews-cta">
+            <a href="https://maps.app.goo.gl/BEuPQp7cdsnNf3m86?g_st=ic" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Google Reviews</a>
+        </div>
     </div>
 </section>
 
@@ -204,16 +318,41 @@
             <h3>Dr. Taylor Foster</h3>
             <p class="doctor-credentials">Doctor of Physical Therapy | Certified Strength & Conditioning Specialist</p>
             <p>
-                Dr. Taylor Foster isn't just a physical therapist — he's a lifelong athlete, lifter, and movement specialist who has spent his career helping others perform at their highest level while staying pain-free and resilient.
+                An athlete turned Doctor of Physical Therapy and Certified Strength & Conditioning Specialist, Dr. Foster's life has been built inside gyms — first as a 12-year-old learning from a world-record powerlifter, and later as a competitive bodybuilder and performance coach. These experiences shaped how he views training, injury, and human performance.
             </p>
             <p>
-                With a Doctor of Physical Therapy degree and a Certified Strength & Conditioning Specialist (CSCS) credential, Dr. Foster brings a unique combination of clinical expertise and real-world training knowledge to every session.
+                Dr. Foster has spent his career helping athletes, lifters, and active individuals move, perform, and recover at the highest level. He earned his degree in Kinesiology from Penn State and his Doctorate in Physical Therapy from Alvernia University, but much of his perspective was formed under the barbell — dealing with his own injuries, setbacks, and frustrations within the traditional healthcare system.
             </p>
             <p>
-                His approach to physical therapy is different by design. Instead of cookie-cutter protocols and endless visits, Dr. Foster focuses on identifying the root cause of dysfunction, applying hands-on treatment, and building individualized programs that keep you moving forward — not just maintained.
+                He understands what it's like to be told to "stop lifting" or to be handed cookie-cutter exercises that don't match the way serious athletes train. Foster's career includes time at the UFC Performance Institute in Las Vegas, where he refined his approach to manual therapy, mobility, and performance-based rehabilitation. He now works extensively with athletes, lifters, and active individuals who expect more from both their bodies and their providers.
             </p>
             <p>
-                Whether you're recovering from injury, managing chronic pain, or looking to optimize your performance, Dr. Foster's goal is simple: help you train smarter, recover faster, and perform better than you thought possible.
+                After years of seeing how overcrowded gyms and cookie-cutter therapy approaches limited true progress, Taylor created Rapid Recovery: Sports Therapy & Performance — a space built to redefine what performance and recovery should feel like.
+            </p>
+            <p>
+                Dr. Foster's work is focused on helping active individuals move better, feel better, and perform better — without being told to stop doing what they love. Traditional insurance-based physical therapy often waits until someone is already injured, rushes sessions, and relies on generic, one-size-fits-all programs in overcrowded clinics. Rapid Recovery was intentionally built to be the opposite of that model.
+            </p>
+            
+            <h4>His treatment philosophy is built on three pillars:</h4>
+            <ul class="philosophy-list">
+                <li><strong>Hands-on care:</strong> Emphasis on targeted, high-level manual therapy to restore movement, reduce pain, improve tissue quality, and speed recovery.</li>
+                <li><strong>Specific mobility and exercise prescription:</strong> Not generic "3 sets of 10." Every movement is selected with a direct purpose tied to the patient's training demands and goals.</li>
+                <li><strong>Performance mindset:</strong> The objective is not just pain relief — it is higher-level performance in lifting, sport, and life.</li>
+            </ul>
+
+            <p>
+                He works one-on-one, without insurance limitations, allowing sessions to focus on what is most effective: deep manual therapy, cupping, IASTM, dry needling, soft-tissue techniques, activation strategies, and performance-driven programming. Treatment is tailored to how individuals actually train, including bodybuilding, powerlifting, CrossFit, combat sports, and general strength training.
+            </p>
+
+            <h4>Why He Does It:</h4>
+            <p>
+                Dr. Foster founded Rapid Recovery: Sports Therapy & Performance to become the provider he once needed himself — someone who lives the lifestyle, trains hard, and truly understands what performance means. From custom-selected equipment sourced globally to one-on-one "Taylored" therapy sessions, his mission is simple — help people train pain-free, recover faster, and perform better than ever.
+            </p>
+            <p>
+                Dr. Foster was once the athlete sitting on the table being told to rest, to stop lifting, or to simply repeat generic exercises and return in six weeks. Those experiences highlighted the need for a different model of care. Athletes and active individuals do not need to wait until injury occurs to take care of their bodies.
+            </p>
+            <p>
+                Dr. Foster's mission is to help people stay in the gym, stay strong, stay healthy, and perform at their best — now and long term. Rapid Recovery: Sports Therapy & Performance was created to redefine what therapy, recovery, and training should feel like — combining world-class equipment, a high-performance environment, and individualized care designed specifically for people who take training seriously.
             </p>
         </div>
     </div>
@@ -240,10 +379,159 @@
         </div>
 
         <div class="privacy-cta">
-            <a href="{base}/privacy-policy" class="btn btn-secondary">View Full Privacy Policy</a>
+            <a href="{base}/pt-privacy-policy" class="btn btn-secondary">View Full PT Privacy Policy</a>
         </div>
     </div>
 </section>
 
 <!-- Contact Section -->
-<ContactForm variant="pt" />
+<section id="contact">
+    <ContactForm variant="pt" />
+</section>
+
+<!-- Free Consult Dialog -->
+<Dialog bind:dialog={consultDialog}>
+    <div class="consult-popup-content">
+        <h3>Free 15-Minute Consultation</h3>
+        <p>Discover how Dr. Taylor Foster can help you achieve your performance and recovery goals — at no cost to you.</p>
+        <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Free Consult</a>
+        <button class="btn btn-text" on:click={() => consultDialog.close()}>Maybe Later</button>
+    </div>
+</Dialog>
+
+<style>
+    .service-descriptions {
+        padding: var(--space-3xl) var(--space-lg);
+        background: var(--color-bg-alt);
+    }
+
+    .descriptions-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .service-detail {
+        margin-bottom: var(--space-3xl);
+        padding-bottom: var(--space-2xl);
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .service-detail:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .service-detail h3 {
+        font-family: var(--font-display);
+        font-size: 1.3rem;
+        color: var(--color-silver);
+        margin-bottom: var(--space-lg);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .service-detail h4 {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        color: var(--color-white);
+        margin: var(--space-lg) 0 var(--space-md);
+    }
+
+    .service-detail p {
+        color: var(--color-text-muted);
+        line-height: 1.8;
+        margin-bottom: var(--space-md);
+    }
+
+    .pricing-price-alt {
+        font-size: 1rem;
+        color: var(--color-text-muted);
+        margin-bottom: var(--space-md);
+    }
+
+    .price-label {
+        font-size: 0.75rem;
+        display: block;
+        color: var(--color-text-muted);
+    }
+
+    .reviews-section {
+        padding: var(--space-3xl) var(--space-lg);
+        background: var(--color-bg);
+    }
+
+    .reviews-content {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .reviews-intro {
+        color: var(--color-text-muted);
+        margin-bottom: var(--space-xl);
+    }
+
+    .reviews-cta {
+        display: flex;
+        justify-content: center;
+    }
+
+    .philosophy-list {
+        list-style: none;
+        padding: 0;
+        margin: var(--space-lg) 0;
+    }
+
+    .philosophy-list li {
+        color: var(--color-text-muted);
+        padding: var(--space-sm) 0;
+        padding-left: var(--space-lg);
+        position: relative;
+        line-height: 1.7;
+    }
+
+    .philosophy-list li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--color-silver);
+    }
+
+    .consult-popup-content {
+        text-align: center;
+    }
+
+    .consult-popup-content h3 {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        color: var(--color-silver);
+        margin-bottom: var(--space-md);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .consult-popup-content p {
+        color: var(--color-text-muted);
+        margin-bottom: var(--space-xl);
+        line-height: 1.7;
+    }
+
+    .consult-popup-content .btn {
+        display: block;
+        margin: 0 auto var(--space-md);
+    }
+
+    .btn-text {
+        background: none;
+        border: none;
+        color: var(--color-text-muted);
+        cursor: pointer;
+        font-size: 0.9rem;
+        text-decoration: underline;
+    }
+
+    .btn-text:hover {
+        color: var(--color-white);
+    }
+</style>

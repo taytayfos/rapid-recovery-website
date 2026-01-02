@@ -43,8 +43,8 @@
             Every detail designed for elite performance
         </p>
         <div class="hero-buttons">
-            <a href="#equipment" class="btn btn-primary">Explore</a>
-            <a href="{base}/#contact" class="btn btn-secondary">Book Tour</a>
+            <a href="{base}/#memberships" class="btn btn-primary">Join Now</a>
+            <a href="{base}/#contact" class="btn btn-secondary">Book a Tour</a>
         </div>
     </div>
     <div class="hero-scroll" aria-hidden="true">
@@ -56,32 +56,19 @@
 <!-- Equipment Section -->
 <section class="equipment-section" id="equipment" aria-labelledby="equipment-title">
     <div class="section-header reveal">
-        <p class="section-tag">The Arsenal</p>
-        <h2 class="section-title" id="equipment-title">Hand Picked Equipment</h2>
-        <p class="section-description">
-            Hand Picked. Tested. Built for Performance.
-        </p>
+        <p class="section-tag">World-Class</p>
+        <h2 class="section-title" id="equipment-title">Hand-Picked Equipment</h2>
     </div>
     <div class="equipment-content reveal">
         <p class="equipment-text">
-            Every piece of equipment inside Rapid Recovery: Elite Training Center was chosen with one goal in mind — to create the ultimate training environment for serious athletes.
+            Every piece of equipment in this facility was hand-selected by Dr. Taylor Foster — not ordered from a catalog or bought in bulk. We source globally from companies like Arsenal Strength, Prime Fitness, Watson Gym Equipment (UK), Atlantis, Hammer Strength, Nautilus, and beyond.
         </p>
         <p class="equipment-text">
-            We don't chase bulk discounts or fill our floor with one logo just to say we did. Because let's be real — no single brand gets it right across the board. One company might make a world-class leg press but a mediocre leg extension. Another might build the perfect chest press but miss on the pulldown.
+            From rare machines you won't find anywhere else in the Lehigh Valley, to classic staples built to last forever — this isn't a gym thrown together by a franchise template. This is a curated collection of equipment designed to maximize performance, target every muscle group effectively, and stand up to serious use by serious lifters.
         </p>
         <p class="equipment-text">
-            That's why every machine here has been <strong>handpicked, tested, and personally selected by Dr. Taylor Foster, DPT, CSCS</strong> — after hundreds of hours spent researching, testing, and refining the perfect lineup.
+            And we're not done. As the community grows, so will the equipment lineup. Your feedback matters here — if there's something you want to see, we're listening.
         </p>
-        <p class="equipment-text">
-            Our collection includes premium pieces sourced from all over the world — Australia, the UK, Sweden, Germany, and the USA — along with custom-engineered equipment designed by Dr. Foster himself.
-        </p>
-        <p class="equipment-text">
-            These machines aren't just equipment — they're instruments of performance. You'll find rare and exclusive pieces you won't see in any gym within 60 minutes, and even a few that exist in only a handful of gyms across the country and some that can only be found here.
-        </p>
-        <div class="equipment-brands">
-            <h4>Recognizable Brands Include:</h4>
-            <p>Atlantis, Gym80, Watson, Rogue, Raw Motive Works, Prime, Gymleco, Premier, Magnum, Cybex, Nautilus, Body Masters, and Life Fitness among other more niche brands and custom pieces</p>
-        </div>
     </div>
 </section>
 
@@ -98,9 +85,6 @@
             <p class="about-text">
                 Whether you're loosening up your hips before heavy squats, dialing in movement patterns during rehab, or finishing your workout with core and stability work, the turf area provides the space and freedom to move with intention.
             </p>
-            <p class="about-text">
-                Clean. Open. Purpose-built. This isn't wasted floor space — it's where your body gets primed to perform and recover at its best.
-            </p>
         </div>
         <div class="about-image reveal">
             <img src="{base}/images/the_gym_turf.jpg" 
@@ -115,36 +99,34 @@
 <!-- Recovery Services Section -->
 <section class="recovery-section" id="recovery" aria-labelledby="recovery-title">
     <div class="section-header reveal">
-        <p class="section-tag">Recovery</p>
+        <p class="section-tag">Restore & Recharge</p>
         <h2 class="section-title" id="recovery-title">Recovery Services & Amenities</h2>
-        <p class="section-description">
-            From elite performance training to precision recovery, every detail here serves one mission — to keep you at the top of your game.
-        </p>
     </div>
     <div class="recovery-grid">
-        <div class="recovery-item reveal">
-            <h4>Cold Plunge</h4>
-            <p>Available in each locker room for powerful nervous-system reset and metabolic activation</p>
+        <div class="recovery-card reveal">
+            <h3>Infrared Saunas</h3>
+            <p>Deep-penetrating heat therapy to promote circulation, relaxation, and muscle recovery.</p>
         </div>
-        <div class="recovery-item reveal">
-            <h4>Infrared Saunas</h4>
-            <p>Multiple private saunas in each bathroom designed for deep heat therapy, tissue regeneration, and detoxification</p>
+        <div class="recovery-card reveal">
+            <h3>Cold Plunge</h3>
+            <p>Cold water immersion to reduce inflammation, boost recovery, and enhance mental resilience.</p>
         </div>
-        <div class="recovery-item reveal">
-            <h4>Hypervolt Massage Guns</h4>
-            <p>Available to sign out at the front desk for percussive therapy wherever you need it</p>
+        <div class="recovery-card reveal">
+            <h3>Inversion Tables</h3>
+            <p>Decompress your spine, relieve pressure, and improve posture through controlled inversion therapy.</p>
         </div>
-        <div class="recovery-item reveal">
-            <h4>Inversion Table</h4>
-            <p>Decompress, restore spinal alignment, unload the nervous system</p>
+        <div class="recovery-card reveal">
+            <h3>Normatec Compression</h3>
+            <p>Leg recovery using dynamic air compression to flush metabolic waste and reduce soreness.</p>
         </div>
-        <div class="recovery-item reveal">
-            <h4>Normatec Compression</h4>
-            <p>Accelerate recovery, flush metabolites, speed bounce-back after heavy sessions or therapy</p>
+        <div class="recovery-card reveal">
+            <h3>Massage Guns</h3>
+            <p>Percussion therapy devices available for targeted muscle release and recovery work.</p>
         </div>
-    </div>
-    <div class="recovery-cta reveal">
-        <a href="{base}/pt" class="btn btn-primary">Learn About Physical Therapy Services</a>
+        <div class="recovery-card reveal">
+            <h3>Recovery Lounge</h3>
+            <p>A dedicated space to rest, recover, and recharge between sessions or after your workout.</p>
+        </div>
     </div>
 </section>
 
@@ -173,7 +155,7 @@
                     <li>Full-wall mirrors for complete visibility and alignment</li>
                     <li>Adjustable lighting to replicate stage conditions</li>
                     <li>Open floor space for movement and transitions</li>
-                    <li>Privacy and professionalism for one-on-one or team sessions</li>
+                    <li>Available 24/7 to all members</li>
                 </ul>
             </div>
         </div>
@@ -181,22 +163,57 @@
 </section>
 
 <!-- CTA Section -->
-<section class="reviews-section">
+<section class="cta-section">
     <div class="section-header reveal">
         <p class="section-tag">Ready to Train?</p>
         <h2 class="section-title">Experience Elite Facilities</h2>
     </div>
-    <div class="reviews-content reveal">
-        <p class="reviews-intro">Book a free tour and see why Rapid Recovery is unlike any gym you've experienced.</p>
-        <div class="reviews-cta">
-            <a href="{base}/#contact" class="btn btn-primary">Book Free Tour</a>
-            <a href="{base}/#memberships" class="btn btn-secondary">View Memberships</a>
+    <div class="cta-content reveal">
+        <p class="cta-text">See our world-class equipment and facilities for yourself. Book a tour or start your membership today.</p>
+        <div class="cta-buttons">
+            <a href="{base}/#memberships" class="btn btn-primary">Join Now</a>
+            <a href="{base}/#contact" class="btn btn-secondary">Book a Tour</a>
         </div>
     </div>
 </section>
 
 <style>
-    .reviews-cta {
+    .posing-features ul {
+        list-style: none;
+        padding: 0;
+        margin-top: var(--space-lg);
+    }
+
+    .posing-features li {
+        padding: var(--space-sm) 0;
+        padding-left: var(--space-lg);
+        position: relative;
+        color: var(--color-text-muted);
+    }
+
+    .posing-features li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--color-silver);
+    }
+
+    .cta-section {
+        background: var(--color-bg);
+        text-align: center;
+    }
+
+    .cta-content {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .cta-text {
+        color: var(--color-text-muted);
+        margin-bottom: var(--space-xl);
+    }
+
+    .cta-buttons {
         display: flex;
         gap: var(--space-md);
         justify-content: center;

@@ -1,284 +1,251 @@
 <script>
+    import { base } from '$app/paths';
     export let variant = 'gym'; // 'gym' or 'pt'
+    export let isPopup = false;
 
     let formData = {
-        inquiryType: '',
-        sessionType: '',
-        name: '',
+        firstName: '',
+        lastName: '',
         email: '',
         phone: '',
-        preferredDate: '',
-        message: '',
-        under18: false
+        interest: '',
+        isUnder18: false,
+        message: ''
     };
 
-    function handleSubmit() {
-        console.log('Form submission:', formData);
-        alert('Thank you for your message! We will get back to you soon.');
-        // Reset form
+    let submitted = false;
+    let submitting = false;
+
+    const gymOptions = [
+        { value: '', label: 'How can we help you?' },
+        { value: 'free-tour', label: 'Free Tour' },
+        { value: 'membership', label: 'Membership Inquiry' },
+        { value: 'personal-training', label: 'Personal Training' },
+        { value: 'day-pass', label: 'Day Pass' },
+        { value: 'physical-therapy', label: 'Physical Therapy' },
+        { value: 'trainer-opportunity', label: 'Trainer Opportunity' },
+        { value: 'other', label: 'Other' }
+    ];
+
+    const ptOptions = [
+        { value: '', label: 'How can we help you?' },
+        { value: 'free-consult', label: 'Free Consultation' },
+        { value: 'initial-assessment', label: 'Initial Assessment' },
+        { value: 'follow-up', label: 'Follow-Up Session' },
+        { value: 'general-recovery', label: 'General Recovery & Performance' },
+        { value: 'elite-training', label: 'Elite Level Personal Training & Biomechanical Analysis' },
+        { value: 'question', label: 'General Question' },
+        { value: 'other', label: 'Other' }
+    ];
+
+    $: options = variant === 'pt' ? ptOptions : gymOptions;
+
+    async function handleSubmit() {
+        submitting = true;
+        
+        // Placeholder for form submission
+        // TODO: Connect to Christian's form submission endpoint
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        
+        submitted = true;
+        submitting = false;
+    }
+
+    function resetForm() {
         formData = {
-            inquiryType: '',
-            sessionType: '',
-            name: '',
+            firstName: '',
+            lastName: '',
             email: '',
             phone: '',
-            preferredDate: '',
-            message: '',
-            under18: false
+            interest: '',
+            isUnder18: false,
+            message: ''
         };
+        submitted = false;
     }
 </script>
 
-<section class="contact" id="contact" aria-labelledby="contact-title">
-    <div class="contact-wrapper">
-        <div class="contact-info reveal">
-            <p class="section-tag">
-                {#if variant === 'pt'}
-                    Schedule Session
-                {:else}
-                    Get in Touch
-                {/if}
-            </p>
-            <h2 class="section-title" id="contact-title">
-                {#if variant === 'pt'}
-                    Book Your Appointment
-                {:else}
-                    Contact Us
-                {/if}
-            </h2>
-            <address style="font-style: normal;">
-                <div class="contact-item">
-                    <p class="contact-label">Location</p>
-                    <p class="contact-value">3325 Hamilton Blvd, Suite #21<br>Allentown, PA 18103</p>
-                </div>
-                <div class="contact-item">
-                    <p class="contact-label">
-                        {#if variant === 'pt'}Clinic Hours{:else}Hours{/if}
-                    </p>
-                    <p class="contact-value">
-                        {#if variant === 'pt'}
-                            By Appointment Only<br>
-                            Monday-Friday: 8AM-9PM<br>
-                            Saturday-Sunday: 8AM-6PM
-                        {:else}
-                            <strong>Members:</strong> 24/7 Access<br>
-                            <strong>Staffed:</strong> Mon-Fri 8AM-9PM<br>
-                            Sat-Sun 8AM-6PM
-                        {/if}
-                    </p>
-                </div>
-                <div class="contact-item">
-                    <p class="contact-label">Phone</p>
-                    <p class="contact-value"><a href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a></p>
-                </div>
-                <div class="contact-item">
-                    <p class="contact-label">Email</p>
-                    <p class="contact-value">
-                        {#if variant === 'pt'}
-                            <a href="mailto:therapy@rapidrecoveryelite.com">therapy@rapidrecoveryelite.com</a>
-                        {:else}
-                            <a href="mailto:info@rapidrecoveryelite.com">info@rapidrecoveryelite.com</a>
-                        {/if}
-                    </p>
-                </div>
-            </address>
-            <div class="contact-social">
-                <a href="#" class="social-link" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer">IG</a>
-                <a href="#" class="social-link" aria-label="Follow us on Facebook" target="_blank" rel="noopener noreferrer">FB</a>
-                <a href="#" class="social-link" aria-label="Subscribe on YouTube" target="_blank" rel="noopener noreferrer">YT</a>
-            </div>
+<div class="contact-form-wrapper" class:popup={isPopup}>
+    <div class="contact-form-container">
+        {#if !isPopup}
+        <div class="section-header">
+            <p class="section-tag">Get In Touch</p>
+            <h2 class="section-title">Contact Us</h2>
         </div>
+        {/if}
 
-        <form class="contact-form reveal" on:submit|preventDefault={handleSubmit} aria-labelledby="form-title">
-            <h3 id="form-title" class="sr-only">
-                {#if variant === 'pt'}Appointment Request Form{:else}Contact Form{/if}
-            </h3>
-            
-            {#if variant === 'pt'}
+        {#if submitted}
+        <div class="success-message">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. We'll get back to you as soon as possible.</p>
+            <button class="btn btn-secondary" on:click={resetForm}>Send Another Message</button>
+        </div>
+        {:else}
+        <form on:submit|preventDefault={handleSubmit} class="contact-form">
+            <div class="form-row">
                 <div class="form-group">
-                    <label class="form-label" for="session-type">Session Type</label>
-                    <select class="form-input" id="session-type" name="session-type" bind:value={formData.sessionType} required>
-                        <option value="">Select session type</option>
-                        <option value="60min-nonmember">60-Minute Session (Non-Member - $200)</option>
-                        <option value="60min-member">60-Minute Session (Member - $150)</option>
-                        <option value="30min-nonmember">30-Minute Session (Non-Member - $149)</option>
-                        <option value="30min-member">30-Minute Session (Member - $99)</option>
-                        <option value="consultation">Free Consultation</option>
-                    </select>
+                    <label for="firstName">First Name <span class="required">*</span></label>
+                    <input 
+                        type="text" 
+                        id="firstName" 
+                        bind:value={formData.firstName} 
+                        required
+                        placeholder="John"
+                    >
                 </div>
-            {:else}
                 <div class="form-group">
-                    <label class="form-label" for="inquiry-type">I'm interested in:</label>
-                    <select class="form-input" id="inquiry-type" name="inquiry-type" bind:value={formData.inquiryType} required>
-                        <option value="">Select an option</option>
-                        <option value="membership">Membership</option>
-                        <option value="day-pass">Day Pass</option>
-                        <option value="tour">Free Gym Tour</option>
-                        <option value="personal-training">Personal Training</option>
-                        <option value="physical-therapy">Physical Therapy / Recovery Session</option>
-                        <option value="media-team">Media Team Services</option>
-                        <option value="business-network">Member Business Network</option>
-                        <option value="presale-waitlist">Presale Waitlist</option>
-                        <option value="other">Other</option>
-                    </select>
+                    <label for="lastName">Last Name <span class="required">*</span></label>
+                    <input 
+                        type="text" 
+                        id="lastName" 
+                        bind:value={formData.lastName} 
+                        required
+                        placeholder="Doe"
+                    >
                 </div>
-            {/if}
+            </div>
 
-            <div class="form-group">
-                <label class="form-label" for="name">Name</label>
-                <input type="text" class="form-input" id="name" name="name" placeholder="Your {variant === 'pt' ? 'full ' : ''}name" bind:value={formData.name} required autocomplete="name">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        bind:value={formData.email} 
+                        required
+                        placeholder="john@example.com"
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        bind:value={formData.phone}
+                        placeholder="(555) 123-4567"
+                    >
+                </div>
             </div>
 
             <div class="form-group">
-                <label class="form-label" for="email">Email</label>
-                <input type="email" class="form-input" id="email" name="email" placeholder="Your email" bind:value={formData.email} required autocomplete="email">
+                <label for="interest">How can we help you? <span class="required">*</span></label>
+                <select id="interest" bind:value={formData.interest} required>
+                    {#each options as option}
+                    <option value={option.value}>{option.label}</option>
+                    {/each}
+                </select>
             </div>
 
-            <div class="form-group">
-                <label class="form-label" for="phone">Phone</label>
-                <input type="tel" class="form-input" id="phone" name="phone" placeholder="Your phone number" bind:value={formData.phone} required={variant === 'pt'} autocomplete="tel">
-            </div>
-
-            {#if variant === 'pt'}
-                <div class="form-group">
-                    <label class="form-label" for="preferred-date">Preferred Date/Time</label>
-                    <input type="text" class="form-input" id="preferred-date" name="preferred-date" placeholder="e.g., Monday mornings, weekday afternoons" bind:value={formData.preferredDate}>
-                </div>
-            {/if}
-
-            <div class="form-group">
-                <label class="form-label" for="message">
-                    {#if variant === 'pt'}Chief Complaint / Reason for Visit{:else}Message{/if}
+            <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" bind:checked={formData.isUnder18}>
+                    <span class="checkmark"></span>
+                    I am under 18 years of age
                 </label>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message / Reason for Visit</label>
                 <textarea 
-                    class="form-input" 
                     id="message" 
-                    name="message" 
-                    placeholder="{variant === 'pt' ? 'Tell us what brings you in (optional)' : 'Tell us more about your inquiry'}" 
-                    bind:value={formData.message}
-                    required={variant !== 'pt'}
+                    bind:value={formData.message} 
+                    rows="4"
+                    placeholder="Tell us more about what you're looking for..."
                 ></textarea>
             </div>
 
-            {#if variant === 'pt'}
-                <div class="form-group checkbox-group">
-                    <input type="checkbox" id="under18" name="under18" bind:checked={formData.under18}>
-                    <label for="under18">Patient is under 18 years of age</label>
-                </div>
-            {/if}
-
-            <button type="submit" class="btn btn-primary">
-                {#if variant === 'pt'}Request Appointment{:else}Send Message{/if}
+            <button type="submit" class="btn btn-primary btn-full" disabled={submitting}>
+                {#if submitting}
+                <span class="spinner"></span> Sending...
+                {:else}
+                Send Message
+                {/if}
             </button>
-
-            {#if variant === 'pt'}
-                <p class="form-note">We will contact you within 24 hours to confirm your appointment.</p>
-            {/if}
         </form>
+        {/if}
     </div>
-</section>
+</div>
 
 <style>
-    .contact {
+    .contact-form-wrapper {
+        padding: var(--space-3xl) var(--space-lg);
         background: var(--color-bg-alt);
     }
 
-    .contact-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-3xl);
-        max-width: 1300px;
+    .contact-form-wrapper.popup {
+        padding: var(--space-xl);
+        background: transparent;
+    }
+
+    .contact-form-container {
+        max-width: 700px;
         margin: 0 auto;
     }
 
-    .contact-info {
-        padding: var(--space-lg) 0;
+    .section-header {
+        text-align: center;
+        margin-bottom: var(--space-2xl);
     }
 
-    .contact-item {
-        margin-bottom: var(--space-lg);
-    }
-
-    .contact-label {
+    .section-tag {
         font-family: var(--font-display);
-        font-size: 0.8125rem;
+        font-size: 0.875rem;
         font-weight: 500;
-        letter-spacing: 2px;
+        letter-spacing: 3px;
         text-transform: uppercase;
         color: var(--color-silver);
-        margin-bottom: var(--space-xs);
+        margin-bottom: var(--space-sm);
     }
 
-    .contact-value {
-        font-size: 1.1875rem;
-        font-weight: 400;
-        color: var(--color-text);
-        line-height: 1.6;
-    }
-
-    .contact-value a {
-        color: var(--color-text);
-        text-decoration: none;
-        transition: color var(--transition-fast);
-    }
-
-    .contact-value a:hover,
-    .contact-value a:focus {
-        color: var(--color-silver);
-    }
-
-    .contact-social {
-        display: flex;
-        gap: var(--space-sm);
-        margin-top: var(--space-xl);
-    }
-
-    .social-link {
-        width: 48px;
-        height: 48px;
-        border: 1px solid var(--color-border);
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .section-title {
         font-family: var(--font-display);
-        font-size: 0.75rem;
-        font-weight: 600;
-        color: var(--color-text);
-        text-decoration: none;
-        transition: all var(--transition-base);
-    }
-
-    .social-link:hover,
-    .social-link:focus {
-        border-color: var(--color-silver);
-        background: var(--color-silver);
-        color: var(--color-bg);
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--color-white);
     }
 
     .contact-form {
-        background: var(--color-bg);
-        padding: var(--space-xl);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-lg);
     }
 
     .form-group {
-        margin-bottom: var(--space-md);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-xs);
     }
 
-    .form-label {
-        display: block;
+    .form-group label {
         font-family: var(--font-display);
-        font-size: 0.8125rem;
+        font-size: 0.875rem;
         font-weight: 500;
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
         text-transform: uppercase;
-        color: var(--color-text-muted);
-        margin-bottom: 0.625rem;
+        color: var(--color-text);
     }
 
-    .form-input {
-        width: 100%;
-        padding: 0.875rem 1rem;
-        background: var(--color-bg-alt);
+    .required {
+        color: var(--color-silver);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: var(--space-md);
+        background: var(--color-bg);
         border: 1px solid var(--color-border);
         color: var(--color-white);
         font-family: var(--font-body);
@@ -286,67 +253,102 @@
         transition: border-color var(--transition-fast);
     }
 
-    .form-input:focus {
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
         outline: none;
         border-color: var(--color-silver);
     }
 
-    .form-input::placeholder {
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
         color: var(--color-text-muted);
     }
 
-    textarea.form-input {
-        min-height: 140px;
-        resize: vertical;
+    .form-group select {
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23808080' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right var(--space-md) center;
+        padding-right: var(--space-2xl);
     }
 
-    select.form-input {
-        cursor: pointer;
+    .form-group select option {
+        background: var(--color-bg);
+        color: var(--color-white);
     }
 
     .checkbox-group {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .checkbox-label {
         display: flex;
         align-items: center;
         gap: var(--space-sm);
-    }
-
-    .checkbox-group input[type="checkbox"] {
-        width: 18px;
-        height: 18px;
-        accent-color: var(--color-silver);
-    }
-
-    .checkbox-group label {
-        margin-bottom: 0;
         cursor: pointer;
+        font-size: 0.95rem;
         text-transform: none;
-        font-family: var(--font-body);
-        font-size: 0.9rem;
+        letter-spacing: 0;
     }
 
-    .contact-form .btn {
+    .checkbox-label input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .btn-full {
         width: 100%;
-        margin-top: var(--space-sm);
+        padding: var(--space-md) var(--space-xl);
     }
 
-    .form-note {
-        margin-top: var(--space-sm);
-        font-size: 0.875rem;
-        color: var(--color-text-muted);
-        font-style: italic;
+    .spinner {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 2px solid transparent;
+        border-top-color: currentColor;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+        margin-right: var(--space-xs);
+    }
+
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+
+    .success-message {
         text-align: center;
+        padding: var(--space-2xl);
     }
 
-    @media (max-width: 1024px) {
-        .contact-wrapper {
+    .success-message svg {
+        color: var(--color-silver);
+        margin-bottom: var(--space-lg);
+    }
+
+    .success-message h3 {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        color: var(--color-white);
+        margin-bottom: var(--space-md);
+    }
+
+    .success-message p {
+        color: var(--color-text-muted);
+        margin-bottom: var(--space-xl);
+    }
+
+    @media (max-width: 768px) {
+        .form-row {
             grid-template-columns: 1fr;
-            gap: var(--space-xl);
         }
-    }
 
-    @media (max-width: 480px) {
-        .contact-social {
-            justify-content: center;
+        .contact-form-wrapper {
+            padding: var(--space-2xl) var(--space-md);
         }
     }
 </style>

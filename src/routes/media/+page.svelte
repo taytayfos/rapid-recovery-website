@@ -102,8 +102,8 @@
             These conversations go beyond sets and reps. We talk discipline, faith, struggle, success, and everything that happens in between. It's a space for connection — where you'll learn what drives the people training beside you and be reminded why this gym is so much more than a place to lift weights.
         </p>
         <div class="podcast-cta">
-            <a href="{base}/#" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Listen on Spotify</a>
-            <a href="{base}/#" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Listen on Apple Podcasts</a>
+            <a href="https://open.spotify.com/show/6dx0KHsb8NB5voUVQE8zuU?si=H30Ukgd8SnuZdjbJ7KUAGA" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Listen on Spotify</a>
+            <a href="https://podcasts.apple.com/us/podcast/iron-insights/id1796747217" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Listen on Apple Podcasts</a>
         </div>
     </div>
 </section>
@@ -133,7 +133,7 @@
             </ul>
         </div>
         <div class="instagram-cta">
-            <a href="{base}/#" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Follow @rr_elitetrainingcenter</a>
+            <a href="https://www.instagram.com/rr_elitetrainingcenter" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Follow @rr_elitetrainingcenter</a>
         </div>
     </div>
 </section>
