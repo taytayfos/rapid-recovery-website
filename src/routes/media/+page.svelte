@@ -72,7 +72,7 @@
                 <li><strong>Training Videos & Photo Sessions</strong> – Capture your workouts, form checks, and PR moments</li>
                 <li><strong>Member Spotlights</strong> – Feature stories highlighting your journey and transformation</li>
                 <li><strong>Business Spotlights</strong> – Tailored photo/video features for member-owned businesses</li>
-                <li><strong>Podcast & Interview Production</strong> – Work with the team behind "Get to Know the Members"</li>
+                <li><strong>Join Get to Know the Members</strong> – A podcast featuring the most important people in our gym community, you! Members can contact us to schedule a time to be featured on the podcast</li>
                 <li><strong>Content Packages</strong> – Perfect for personal branding and social media growth</li>
             </ul>
         </div>
@@ -137,3 +137,5 @@
         </div>
     </div>
 </section>
+
+

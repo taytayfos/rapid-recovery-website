@@ -142,7 +142,7 @@
                 <p>If you have questions about this Privacy Policy or our data practices, please contact:</p>
                 <div class="contact-info-legal">
                     <p><strong>Business Name:</strong> Rapid Recovery: Elite Training Center LLC</p>
-                    <p><strong>Location:</strong> 3325 Hamilton Blvd, Suite #21, Allentown, PA 18103</p>
+                    <p><strong>Location:</strong> 3243 Hamilton Blvd, Allentown, PA 18103</p>
                 </div>
             </div>
 

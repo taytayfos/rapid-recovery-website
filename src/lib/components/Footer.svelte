@@ -18,14 +18,14 @@
                 {/if}
             </p>
             <div class="footer-details">
-                <p>3325 Hamilton Blvd, Suite #21</p>
+                <p>3243 Hamilton Blvd</p>
                 <p>Allentown, PA 18103</p>
-                <p><a href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a></p>
+                <p><a href="tel:+17173647848">(717) 364-7848</a></p>
                 <p>
                     {#if variant === 'pt'}
-                        <a href="mailto:therapy@rapidrecoveryelite.com">therapy@rapidrecoveryelite.com</a>
+                        <a href="mailto:support@elitetrainingcenter.org">support@elitetrainingcenter.org</a>
                     {:else}
-                        <a href="mailto:info@rapidrecoveryelite.com">info@rapidrecoveryelite.com</a>
+                        <a href="mailto:support@elitetrainingcenter.org">support@elitetrainingcenter.org</a>
                     {/if}
                 </p>
             </div>
@@ -78,7 +78,7 @@
         <!-- Google Maps Embed -->
         <div class="footer-map">
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1234567890!2d-75.5000000!3d40.6000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s3325%20Hamilton%20Blvd%2C%20Allentown%2C%20PA%2018103!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1234567890!2d-75.5000000!3d40.6000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s3243%20Hamilton%20Blvd%2C%20Allentown%2C%20PA%2018103!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
                 width="100%" 
                 height="100%" 
                 style="border:0;" 
@@ -117,7 +117,6 @@
         padding: var(--space-3xl) var(--space-2xl);
     }
 
-    /* Logo */
     .footer-logo {
         display: inline-block;
         margin-bottom: var(--space-sm);
@@ -183,7 +182,6 @@
         color: var(--color-bg);
     }
 
-    /* Footer Navigation */
     .footer-nav-section {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -221,7 +219,6 @@
         color: var(--color-silver);
     }
 
-    /* Footer Map */
     .footer-map {
         position: relative;
         border: 1px solid var(--color-border);
@@ -242,7 +239,6 @@
         filter: grayscale(50%) invert(92%) contrast(90%);
     }
 
-    /* Footer Bottom */
     .footer-bottom {
         border-top: 1px solid var(--color-border);
         padding: var(--space-md) var(--space-2xl);
@@ -254,7 +250,6 @@
         color: var(--color-text-muted);
     }
 
-    /* Responsive */
     @media (max-width: 1024px) {
         .footer-main {
             grid-template-columns: 1fr 1fr;

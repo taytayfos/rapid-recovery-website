@@ -61,7 +61,7 @@
     </div>
     <div class="equipment-content reveal">
         <p class="equipment-text">
-            Every piece of equipment in this facility was hand-selected by Dr. Taylor Foster — not ordered from a catalog or bought in bulk. We source globally from companies like Arsenal Strength, Prime Fitness, Watson Gym Equipment (UK), Atlantis, Hammer Strength, Nautilus, and beyond.
+            Every piece of equipment in this facility was hand-selected by Dr. Taylor Foster — not ordered from a catalog or bought in bulk. We source globally from companies like Gym80 (Germany), Prime Fitness, Watson Gym Equipment (UK), Atlantis, Gymleco (Sweden), Nautilus, and beyond.
         </p>
         <p class="equipment-text">
             From rare machines you won't find anywhere else in the Lehigh Valley, to classic staples built to last forever — this isn't a gym thrown together by a franchise template. This is a curated collection of equipment designed to maximize performance, target every muscle group effectively, and stand up to serious use by serious lifters.
@@ -123,10 +123,6 @@
             <h3>Massage Guns</h3>
             <p>Percussion therapy devices available for targeted muscle release and recovery work.</p>
         </div>
-        <div class="recovery-card reveal">
-            <h3>Recovery Lounge</h3>
-            <p>A dedicated space to rest, recover, and recharge between sessions or after your workout.</p>
-        </div>
     </div>
 </section>
 
@@ -145,7 +141,7 @@
             <h2 class="section-title" id="posing-title">Posing Room</h2>
             <h3 class="section-subtitle">Precision. Presentation. Perfection.</h3>
             <p class="about-text">
-                The Posing Room at Rapid Recovery: Elite Training Center was designed for athletes who take the stage — and their craft — seriously. This private, professional space is available 24/7 and offers the perfect environment to refine your presentation, assess symmetry, and perfect every transition under lighting that mirrors real competition settings.
+                The Posing Room at Rapid Recovery: Elite Training Center was designed for athletes who take the stage — and their craft — seriously. This private, professional space offers the perfect environment to refine your presentation, assess symmetry, and perfect every transition under lighting that mirrors real competition settings.
             </p>
             <p class="about-text">
                 Whether you're a bodybuilder, physique competitor, classic athlete, or coach working with clients, the posing room provides an atmosphere built for focus and refinement — free from distraction, crowding, or interruptions.
@@ -155,7 +151,6 @@
                     <li>Full-wall mirrors for complete visibility and alignment</li>
                     <li>Adjustable lighting to replicate stage conditions</li>
                     <li>Open floor space for movement and transitions</li>
-                    <li>Available 24/7 to all members</li>
                 </ul>
             </div>
         </div>

@@ -76,7 +76,6 @@
                 <li><strong>Rapid Recovery Merchandise</strong> – Apparel and accessories that represent our community</li>
             </ul>
         </div>
-        <p class="shop-note"><em>All purchases available during staffed hours only. Stop by the front desk for smoothie options and special requests.</em></p>
     </div>
 </section>
 
@@ -103,45 +102,9 @@
     </div>
 </section>
 
-<!-- Hours Section -->
-<section class="reviews-section">
-    <div class="section-header reveal">
-        <p class="section-tag">Staffed Hours</p>
-        <h2 class="section-title">When to Shop</h2>
-    </div>
-    <div class="reviews-content reveal">
-        <p class="reviews-intro">All shop purchases are available during staffed hours only.</p>
-        <div class="hours-box">
-            <p><strong>Monday - Friday:</strong> 8:00am - 9:00pm</p>
-            <p><strong>Saturday - Sunday:</strong> 8:00am - 6:00pm</p>
-        </div>
-        <div class="reviews-cta">
-            <a href="{base}/#contact" class="btn btn-primary">Contact Us</a>
-        </div>
-    </div>
-</section>
-
 <style>
     .cta-center {
         text-align: center;
         margin-top: var(--space-xl);
-    }
-
-    .hours-box {
-        text-align: center;
-        padding: var(--space-lg);
-        background: var(--color-bg);
-        border: 1px solid var(--color-border);
-        margin: var(--space-lg) auto;
-        max-width: 400px;
-    }
-
-    .hours-box p {
-        margin-bottom: var(--space-xs);
-        color: var(--color-text);
-    }
-
-    .reviews-cta {
-        margin-top: var(--space-lg);
     }
 </style>

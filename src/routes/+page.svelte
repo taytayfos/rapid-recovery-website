@@ -82,7 +82,7 @@
                 This isn't a franchise; it's a small business built on community, connection, and results.
             </p>
             <p class="about-text">
-                We're open 24/7 because your schedule shouldn't dictate your progress. Our staff knows you by name — not a key tag number.
+                We're open 365 days a year because your schedule shouldn't dictate your progress. Our staff knows you by name — not a key tag number.
             </p>
             <p class="about-text">
                 We feature hand-picked, high-end equipment curated by Dr. Taylor Foster, DPT, CSCS, and a recovery lounge with infrared saunas, inversion tables, cold plunges, massage guns, and Normatec compression.
@@ -117,8 +117,8 @@
                     <p class="stat-label">Equipment</p>
                 </div>
                 <div class="stat">
-                    <p class="stat-number">24/7</p>
-                    <p class="stat-label">Access</p>
+                    <p class="stat-number">365</p>
+                    <p class="stat-label">Days/Year</p>
                 </div>
                 <div class="stat">
                     <p class="stat-number">500</p>
@@ -195,6 +195,7 @@
     <div class="presale-banner reveal">
         <h3>🎉 Presale Now Live</h3>
         <ul class="presale-list">
+            <li>Members 1-100 locked in at <strong>$75/mo FOREVER</strong></li>
             <li>Members 101-500 locked in at <strong>$99/mo FOREVER</strong></li>
             <li>If membership cap is reached before opening, 5 lucky members will get a whole year membership for free!</li>
             <li>Waived $100 application fee included</li>
@@ -209,10 +210,10 @@
         <article class="membership-card featured reveal">
             <span class="membership-badge">Best Value</span>
             <h3 class="membership-name">12-Month Contract</h3>
-            <p class="membership-price">$149<span>/month</span></p>
+            <p class="membership-price">$125<span>/month</span></p>
             <p class="membership-period">Billed monthly for 12 months</p>
             <ul class="membership-features">
-                <li>24/7 gym access</li>
+                <li>4:00am - 11:00pm gym access</li>
                 <li>Full recovery lounge access</li>
                 <li>Posing room access</li>
                 <li>Free parking</li>
@@ -223,10 +224,10 @@
 
         <article class="membership-card reveal">
             <h3 class="membership-name">Month-to-Month</h3>
-            <p class="membership-price">$199<span>/month</span></p>
+            <p class="membership-price">$150<span>/month</span></p>
             <p class="membership-period">Cancel anytime</p>
             <ul class="membership-features">
-                <li>24/7 gym access</li>
+                <li>4:00am - 11:00pm gym access</li>
                 <li>Full recovery lounge access</li>
                 <li>Posing room access</li>
                 <li>Free parking</li>
@@ -277,7 +278,7 @@
 
     <div class="addon-option reveal">
         <h4>Guest Privileges Add-on</h4>
-        <p>$30/month - Bring 3 guests per month (member must be present, guests must complete waiver)</p>
+        <p>$30/month - Bring one guest per 24 hour period on weekends and holidays (member must be present, guests must complete waiver)</p>
     </div>
 
     <div class="age-requirements reveal">
@@ -285,7 +286,7 @@
         <p>Rapid Recovery: Elite Training Center is designed for a serious training environment — a space where focus, respect, and discipline come first. For that reason, membership is limited to individuals <strong>18 years and older</strong>.</p>
         <p>That said, we understand there are younger athletes who share the same drive and maturity that define our community. Exceptions may be granted — but only after an in-person interview and evaluation to ensure the individual is a good fit for both the culture and expectations of the facility.</p>
         <p>We're not just looking for age — we're looking for attitude, accountability, and respect for the space and the people in it.</p>
-        <p><strong>Note:</strong> We do NOT offer day passes to individuals under 18 years of age after staffed hours. Day passes for under-18 require a parent/legal guardian interview during staffed hours. Call ahead recommended.</p>
+        <p><strong>Note:</strong> Day passes for under-18 require a parent/legal guardian interview. Call ahead recommended.</p>
     </div>
 </section>
 
@@ -347,21 +348,15 @@
         <h2 class="section-title" id="location-title">Location and Parking</h2>
     </div>
     <div class="location-content reveal">
-        <p class="location-text">We know you can't wait to get here — but let's make sure you actually find us first. Rapid Recovery: Elite Training Center is located at <strong>3325 Hamilton Blvd, Suite 21, Allentown, PA 18103</strong> — tucked away in the back of the plaza for a little extra exclusivity. Think of it as a hidden gem… because that's exactly what it is.</p>
+        <p class="location-text">We know you can't wait to get here — but let's make sure you actually find us first. Rapid Recovery: Elite Training Center is located at <strong>3243 Hamilton Blvd, Allentown, PA 18103</strong> — tucked away in the back of the plaza for a little extra exclusivity. Think of it as a hidden gem… because that's exactly what it is.</p>
         <p class="location-text">You can access us from Hamilton Blvd, which runs behind the plaza. Just pull in, drive straight toward the rear, and look for our signage and entryway.</p>
         <p class="location-text">There's limited parking in front of our space so you may need to park in the side lot and walk over depending on how busy we are.</p>
         <div class="location-hours">
             <h4>Hours of Operation:</h4>
-            <p><strong>Members:</strong> 24/7 Access, 365 Days a Year</p>
-            <p><strong>Staffed Hours:</strong></p>
-            <ul class="staffed-hours-list">
-                <li>Monday - Friday: 8:00am - 9:00pm</li>
-                <li>Saturday - Sunday: 8:00am - 6:00pm</li>
-            </ul>
-            <p class="hours-note"><em>Day passes after hours will be limited and can only be purchased by approval from a manager. If you will need a day pass after hours please reach out ahead of time to prevent any issues or complications from accessing the facility.</em></p>
+            <p><strong>4:00am - 11:00pm, 365 Days a Year</strong></p>
         </div>
         <div class="location-cta">
-            <a href="https://maps.google.com/?q=3325+Hamilton+Blvd+Suite+21+Allentown+PA+18103" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Get Directions</a>
+            <a href="https://maps.google.com/?q=3243+Hamilton+Blvd+Allentown+PA+18103" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Get Directions</a>
             <a href="#contact" class="btn btn-secondary">Purchase Day Pass</a>
         </div>
     </div>
@@ -373,6 +368,13 @@
 </section>
 
 <style>
+    .hero-overlay {
+        background: 
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.6) 100%),
+            radial-gradient(ellipse at 20% 80%, rgba(192, 192, 192, 0.12) 0%, transparent 50%),
+            radial-gradient(ellipse at 80% 20%, rgba(192, 192, 192, 0.08) 0%, transparent 40%);
+    }
+
     .formula-section {
         padding: var(--space-3xl) var(--space-lg);
         background: var(--color-bg);

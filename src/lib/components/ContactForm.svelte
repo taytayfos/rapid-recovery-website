@@ -24,6 +24,7 @@
         { value: 'day-pass', label: 'Day Pass' },
         { value: 'physical-therapy', label: 'Physical Therapy' },
         { value: 'trainer-opportunity', label: 'Trainer Opportunity' },
+        { value: 'media-team', label: 'Media Team' },
         { value: 'other', label: 'Other' }
     ];
 

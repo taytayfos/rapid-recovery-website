@@ -219,8 +219,8 @@
             <span class="pricing-badge">Most Popular</span>
             <h3 class="pricing-name">Initial Assessment</h3>
             <p class="pricing-subtitle">60 Minutes</p>
-            <p class="pricing-price">$200 <span class="price-label">member</span></p>
-            <p class="pricing-price-alt">$250 <span class="price-label">non-member (day pass included)</span></p>
+            <p class="pricing-price">$150 <span class="price-label">member</span></p>
+            <p class="pricing-price-alt">$200 <span class="price-label">non-member (day pass included)</span></p>
             <ul class="pricing-features">
                 <li>Comprehensive evaluation</li>
                 <li>Hands-on manual therapy</li>
@@ -231,10 +231,37 @@
         </article>
 
         <article class="pricing-card reveal">
+            <h3 class="pricing-name">Initial Assessment</h3>
+            <p class="pricing-subtitle">30 Minutes</p>
+            <p class="pricing-price">$100 <span class="price-label">member</span></p>
+            <p class="pricing-price-alt">$150 <span class="price-label">non-member (day pass included)</span></p>
+            <ul class="pricing-features">
+                <li>Focused evaluation</li>
+                <li>Hands-on treatment</li>
+                <li>Initial recommendations</li>
+            </ul>
+            <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book Now</a>
+        </article>
+
+        <article class="pricing-card reveal">
+            <h3 class="pricing-name">Follow-Up Session</h3>
+            <p class="pricing-subtitle">60 Minutes</p>
+            <p class="pricing-price">$150 <span class="price-label">member</span></p>
+            <p class="pricing-price-alt">$200 <span class="price-label">non-member (day pass included)</span></p>
+            <ul class="pricing-features">
+                <li>Extended treatment time</li>
+                <li>Progress review</li>
+                <li>Comprehensive hands-on work</li>
+                <li>Program adjustments</li>
+            </ul>
+            <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book Now</a>
+        </article>
+
+        <article class="pricing-card reveal">
             <h3 class="pricing-name">Follow-Up Session</h3>
             <p class="pricing-subtitle">30 Minutes</p>
-            <p class="pricing-price">$125 <span class="price-label">member</span></p>
-            <p class="pricing-price-alt">$175 <span class="price-label">non-member (day pass included)</span></p>
+            <p class="pricing-price">$100 <span class="price-label">member</span></p>
+            <p class="pricing-price-alt">$150 <span class="price-label">non-member (day pass included)</span></p>
             <ul class="pricing-features">
                 <li>Progress review</li>
                 <li>Continued treatment</li>
@@ -244,14 +271,15 @@
         </article>
 
         <article class="pricing-card reveal">
-            <h3 class="pricing-name">Extended Follow-Up</h3>
-            <p class="pricing-subtitle">45 Minutes</p>
-            <p class="pricing-price">$175 <span class="price-label">member</span></p>
-            <p class="pricing-price-alt">$225 <span class="price-label">non-member (day pass included)</span></p>
+            <h3 class="pricing-name">General Recovery & Performance</h3>
+            <p class="pricing-subtitle">60 Minutes</p>
+            <p class="pricing-price">$150 <span class="price-label">member</span></p>
+            <p class="pricing-price-alt">$200 <span class="price-label">non-member (day pass included)</span></p>
             <ul class="pricing-features">
-                <li>Extended treatment time</li>
-                <li>Complex case management</li>
-                <li>Comprehensive hands-on work</li>
+                <li>Non-injury focused</li>
+                <li>Extended manual therapy</li>
+                <li>Performance optimization</li>
+                <li>Recovery enhancement</li>
             </ul>
             <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book Now</a>
         </article>

@@ -72,7 +72,7 @@
                 <li><strong>Website Feature:</strong> Your business showcased on our Member Business Network page</li>
                 <li><strong>In-Gym Promotion:</strong> Digital ad space on our gym TVs</li>
                 <li><strong>Banner or Poster Display:</strong> Professionally hung inside the gym</li>
-                <li><strong>Exclusive Events & Networking:</strong> Quarterly Members in Business meet-ups</li>
+                <li><strong>Exclusive Events & Networking:</strong> Scheduled meet-ups for member business owners to connect</li>
                 <li><strong>Podcast Feature:</strong> Spotlight on our "Get to Know the Members" podcast</li>
                 <li><strong>Social Media Spotlight:</strong> Featured across our social channels</li>
                 <li><strong>Member Business Feature Email:</strong> Monthly email to entire community</li>
