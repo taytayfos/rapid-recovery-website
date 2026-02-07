@@ -2,8 +2,20 @@
     import { base } from '$app/paths';
     import { onMount } from 'svelte';
     import ContactForm from '$lib/components/ContactForm.svelte';
+    import Dialog from '$lib/components/Dialog.svelte';
+
+    let promoDialog;
+    let promoShown = false;
 
     onMount(() => {
+        // Show promo popup after 15 seconds
+        const promoTimer = setTimeout(() => {
+            if (!promoShown && promoDialog) {
+                promoDialog.showModal();
+                promoShown = true;
+            }
+        }, 15000);
+
         // Scroll reveal animation
         const checkReveal = () => {
             const windowHeight = window.innerHeight;
@@ -21,6 +33,7 @@
         checkReveal();
 
         return () => {
+            clearTimeout(promoTimer);
             window.removeEventListener('scroll', checkReveal);
         };
     });
@@ -32,7 +45,7 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<section class="hero" id="home" aria-labelledby="hero-title" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=80');">
+<section class="hero" id="home" aria-labelledby="hero-title" style="background-image: url('{base}/images/home_page.jpg');">
     <div class="hero-overlay" aria-hidden="true"></div>
     
     <div class="hero-content">
@@ -160,21 +173,21 @@
             </div>
         </a>
         <a href="{base}/facilities#turf" class="feature-card reveal">
-            <img src="{base}/images/the_gym_turf.jpg" alt="Turf area">
+            <img src="{base}/images/turf.jpg" alt="Turf area">
             <div class="feature-overlay">
                 <h3>Generous Turf Area</h3>
                 <p>150 sq ft dedicated movement space</p>
             </div>
         </a>
         <a href="{base}/facilities#recovery" class="feature-card reveal">
-            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" alt="Recovery services">
+            <img src="{base}/images/recovery_services.jpg" alt="Recovery services">
             <div class="feature-overlay">
                 <h3>Recovery Services</h3>
                 <p>Cold plunge, saunas, and more</p>
             </div>
         </a>
         <a href="{base}/training" class="feature-card reveal">
-            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80" alt="Personal training">
+            <img src="{base}/images/elite_personal_training.jpg" alt="Personal training">
             <div class="feature-overlay">
                 <h3>Elite Personal Training</h3>
                 <p>Hand-selected, vetted coaches</p>
@@ -196,7 +209,6 @@
         <h3>🎉 Presale Now Live</h3>
         <ul class="presale-list">
             <li>Members 1-100 locked in at <strong>$75/mo FOREVER</strong></li>
-            <li>Members 101-500 locked in at <strong>$99/mo FOREVER</strong></li>
             <li>If membership cap is reached before opening, 5 lucky members will get a whole year membership for free!</li>
             <li>Waived $100 application fee included</li>
             <li>Early access to the gym prior to grand opening included</li>
@@ -367,6 +379,15 @@
     <ContactForm variant="gym" />
 </section>
 
+<!-- Promo Popup -->
+<Dialog bind:dialog={promoDialog}>
+    <div class="promo-popup">
+        <h3 class="promo-title">Waived Initiation/Application Fee</h3>
+        <p class="promo-text">Want to save $100? Schedule a tour with us and when you sign up for a contracted or non-contracted membership we will waive your $100 Initiation/Application Fee.</p>
+        <a href="#contact" class="btn btn-primary" on:click={() => promoDialog.close()}>Schedule a Tour</a>
+    </div>
+</Dialog>
+
 <style>
     .hero-overlay {
         background: 
@@ -505,5 +526,26 @@
         .presale-banner {
             padding: var(--space-lg);
         }
+    }
+
+    .promo-popup {
+        text-align: center;
+        padding: var(--space-lg) 0;
+    }
+
+    .promo-title {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        color: var(--color-silver);
+        margin-bottom: var(--space-lg);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .promo-text {
+        color: var(--color-text);
+        line-height: 1.7;
+        margin-bottom: var(--space-xl);
+        font-size: 1.05rem;
     }
 </style>

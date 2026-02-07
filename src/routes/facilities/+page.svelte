@@ -30,7 +30,7 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<section class="hero pt-hero" id="home" aria-labelledby="hero-title" style="background-image: url('{base}/images/the_gym_banner.jpg');">
+<section class="hero pt-hero" id="home" aria-labelledby="hero-title" style="background-image: url('{base}/images/faculty.jpg');">
     <div class="hero-overlay" aria-hidden="true"></div>
     
     <div class="hero-content">
@@ -87,7 +87,7 @@
             </p>
         </div>
         <div class="about-image reveal">
-            <img src="{base}/images/the_gym_turf.jpg" 
+            <img src="{base}/images/turf.jpg" 
                  alt="Turf area for movement and dynamic exercises" 
                  loading="lazy"
                  width="800"

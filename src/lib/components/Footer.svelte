@@ -20,7 +20,7 @@
             <div class="footer-details">
                 <p>3243 Hamilton Blvd</p>
                 <p>Allentown, PA 18103</p>
-                <p><a href="tel:+17173647848">(717) 364-7848</a></p>
+                <p><a href="tel:+16107986815">(610) 798-6815</a></p>
                 <p>
                     {#if variant === 'pt'}
                         <a href="mailto:support@elitetrainingcenter.org">support@elitetrainingcenter.org</a>
