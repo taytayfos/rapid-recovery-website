@@ -1,7 +1,23 @@
 <script>
     export let variant = 'gym'; // 'gym' or 'pt'
     export let isPopup = false;
+
+    let submitted = false;
+
+    function onIframeLoad() {
+        // The hidden iframe has loaded (meaning the form was submitted).
+        // Show success message after a brief delay to ensure tracking captured it.
+        if (submitted) return;
+        submitted = true;
+    }
+
+    function resetForm() {
+        submitted = false;
+    }
 </script>
+
+<!-- Hidden iframe to absorb the form POST (prevents 405 on the page) -->
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" on:load={onIframeLoad} title="form target"></iframe>
 
 <div class="contact-form-wrapper" class:popup={isPopup}>
     <div class="contact-form-container">
@@ -12,7 +28,18 @@
         </div>
         {/if}
 
-        <form class="contact-form" method="POST" action="">
+        {#if submitted}
+        <div class="success-message">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. We'll get back to you as soon as possible.</p>
+            <button class="btn btn-secondary" on:click={resetForm}>Send Another Message</button>
+        </div>
+        {:else}
+        <form class="contact-form" method="POST" action="about:blank" target="hidden_iframe">
             <div class="form-row">
                 <div class="form-group">
                     <label for="first_name">First Name <span class="required">*</span></label>
@@ -111,6 +138,7 @@
 
             <input type="submit" class="btn btn-primary btn-full" value="Send Message">
         </form>
+        {/if}
     </div>
 </div>
 
@@ -270,6 +298,28 @@
         font-weight: 600;
         letter-spacing: 2px;
         text-transform: uppercase;
+    }
+
+    .success-message {
+        text-align: center;
+        padding: var(--space-2xl);
+    }
+
+    .success-message svg {
+        color: var(--color-silver);
+        margin-bottom: var(--space-lg);
+    }
+
+    .success-message h3 {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        color: var(--color-white);
+        margin-bottom: var(--space-md);
+    }
+
+    .success-message p {
+        color: var(--color-text-muted);
+        margin-bottom: var(--space-xl);
     }
 
     @media (max-width: 768px) {
