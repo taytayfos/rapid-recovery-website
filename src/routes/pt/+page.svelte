@@ -326,6 +326,17 @@
     </div>
     <div class="reviews-content reveal">
         <p class="reviews-intro">See what our patients are saying about Rapid Recovery: Sports Therapy & Performance</p>
+        <div class="reviews-widget">
+            <iframe 
+                id="msgsndr_reviews" 
+                src="https://backend.leadconnectorhq.com/appengine/reviews/get_widget/QWCXhqVIJwvud0EmvvoF" 
+                frameborder="0" 
+                scrolling="no" 
+                title="Google Reviews for Rapid Recovery"
+                style="min-width:100%;width:100%;border:none;" 
+                height="1157"
+            ></iframe>
+        </div>
         <div class="reviews-cta">
             <a href="https://maps.app.goo.gl/BEuPQp7cdsnNf3m86?g_st=ic" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Google Reviews</a>
         </div>
@@ -491,8 +502,19 @@
 
     .reviews-content {
         text-align: center;
-        max-width: 600px;
+        max-width: 900px;
         margin: 0 auto;
+    }
+
+    .reviews-widget {
+        margin-bottom: var(--space-lg);
+        border-radius: 8px;
+        overflow: hidden;
+        background: var(--color-bg-alt);
+    }
+
+    .reviews-widget iframe {
+        display: block;
     }
 
     .reviews-intro {
