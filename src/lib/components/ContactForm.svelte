@@ -1,69 +1,6 @@
 <script>
-    import { base } from '$app/paths';
     export let variant = 'gym'; // 'gym' or 'pt'
     export let isPopup = false;
-
-    let formData = {
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        interest: '',
-        isUnder18: false,
-        message: ''
-    };
-
-    let submitted = false;
-    let submitting = false;
-
-    const gymOptions = [
-        { value: '', label: 'How can we help you?' },
-        { value: 'free-tour', label: 'Free Tour' },
-        { value: 'membership', label: 'Membership Inquiry' },
-        { value: 'personal-training', label: 'Personal Training' },
-        { value: 'day-pass', label: 'Day Pass' },
-        { value: 'physical-therapy', label: 'Physical Therapy' },
-        { value: 'trainer-opportunity', label: 'Trainer Opportunity' },
-        { value: 'media-team', label: 'Media Team' },
-        { value: 'other', label: 'Other' }
-    ];
-
-    const ptOptions = [
-        { value: '', label: 'How can we help you?' },
-        { value: 'free-consult', label: 'Free Consultation' },
-        { value: 'initial-assessment', label: 'Initial Assessment' },
-        { value: 'follow-up', label: 'Follow-Up Session' },
-        { value: 'general-recovery', label: 'General Recovery & Performance' },
-        { value: 'elite-training', label: 'Elite Level Personal Training & Biomechanical Analysis' },
-        { value: 'question', label: 'General Question' },
-        { value: 'other', label: 'Other' }
-    ];
-
-    $: options = variant === 'pt' ? ptOptions : gymOptions;
-
-    async function handleSubmit() {
-        submitting = true;
-        
-        // Placeholder for form submission
-        // TODO: Connect to Christian's form submission endpoint
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        submitted = true;
-        submitting = false;
-    }
-
-    function resetForm() {
-        formData = {
-            firstName: '',
-            lastName: '',
-            email: '',
-            phone: '',
-            interest: '',
-            isUnder18: false,
-            message: ''
-        };
-        submitted = false;
-    }
 </script>
 
 <div class="contact-form-wrapper" class:popup={isPopup}>
@@ -75,35 +12,24 @@
         </div>
         {/if}
 
-        {#if submitted}
-        <div class="success-message">
-            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                <polyline points="22 4 12 14.01 9 11.01"/>
-            </svg>
-            <h3>Message Sent!</h3>
-            <p>Thank you for reaching out. We'll get back to you as soon as possible.</p>
-            <button class="btn btn-secondary" on:click={resetForm}>Send Another Message</button>
-        </div>
-        {:else}
-        <form on:submit|preventDefault={handleSubmit} class="contact-form">
+        <form class="contact-form" method="POST" action="">
             <div class="form-row">
                 <div class="form-group">
-                    <label for="firstName">First Name <span class="required">*</span></label>
+                    <label for="first_name">First Name <span class="required">*</span></label>
                     <input 
                         type="text" 
-                        id="firstName" 
-                        bind:value={formData.firstName} 
+                        id="first_name" 
+                        name="first_name"
                         required
                         placeholder="John"
                     >
                 </div>
                 <div class="form-group">
-                    <label for="lastName">Last Name <span class="required">*</span></label>
+                    <label for="last_name">Last Name <span class="required">*</span></label>
                     <input 
                         type="text" 
-                        id="lastName" 
-                        bind:value={formData.lastName} 
+                        id="last_name" 
+                        name="last_name"
                         required
                         placeholder="Doe"
                     >
@@ -116,17 +42,18 @@
                     <input 
                         type="email" 
                         id="email" 
-                        bind:value={formData.email} 
+                        name="email"
                         required
                         placeholder="john@example.com"
                     >
                 </div>
                 <div class="form-group">
-                    <label for="phone">Phone</label>
+                    <label for="phone">Phone <span class="required">*</span></label>
                     <input 
                         type="tel" 
                         id="phone" 
-                        bind:value={formData.phone}
+                        name="phone"
+                        required
                         placeholder="(555) 123-4567"
                     >
                 </div>
@@ -134,18 +61,41 @@
 
             <div class="form-group">
                 <label for="interest">How can we help you? <span class="required">*</span></label>
-                <select id="interest" bind:value={formData.interest} required>
-                    {#each options as option}
-                    <option value={option.value}>{option.label}</option>
-                    {/each}
+                <select id="interest" name="interest" required>
+                    {#if variant === 'pt'}
+                        <option value="">Select an option...</option>
+                        <option value="Free Consultation">Free Consultation</option>
+                        <option value="Initial Assessment">Initial Assessment</option>
+                        <option value="Follow-Up Session">Follow-Up Session</option>
+                        <option value="General Recovery & Performance">General Recovery & Performance</option>
+                        <option value="Elite Personal Training & Biomechanical Analysis">Elite Personal Training & Biomechanical Analysis</option>
+                        <option value="General Question">General Question</option>
+                        <option value="Other">Other</option>
+                    {:else}
+                        <option value="">Select an option...</option>
+                        <option value="Free Tour">Free Tour</option>
+                        <option value="Membership Inquiry">Membership Inquiry</option>
+                        <option value="Personal Training">Personal Training</option>
+                        <option value="Day Pass">Day Pass</option>
+                        <option value="Physical Therapy">Physical Therapy</option>
+                        <option value="Trainer Opportunity">Trainer Opportunity</option>
+                        <option value="Media Team">Media Team</option>
+                        <option value="Other">Other</option>
+                    {/if}
                 </select>
             </div>
 
             <div class="form-group checkbox-group">
                 <label class="checkbox-label">
-                    <input type="checkbox" bind:checked={formData.isUnder18}>
-                    <span class="checkmark"></span>
-                    I am under 18 years of age
+                    <input type="checkbox" name="under_18" value="yes">
+                    <span>I am under 18 years of age</span>
+                </label>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="terms_and_conditions" value="yes" required>
+                    <span class="terms-text">I agree to the <a href={variant === 'pt' ? '/rapid-recovery-website/pt-privacy-policy' : '/rapid-recovery-website/privacy-policy'} target="_blank" rel="noopener noreferrer">terms & conditions</a>. By providing my phone number, I agree to receive text messages from the business.</span>
                 </label>
             </div>
 
@@ -153,21 +103,14 @@
                 <label for="message">Message / Reason for Visit</label>
                 <textarea 
                     id="message" 
-                    bind:value={formData.message} 
+                    name="message"
                     rows="4"
                     placeholder="Tell us more about what you're looking for..."
                 ></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-full" disabled={submitting}>
-                {#if submitting}
-                <span class="spinner"></span> Sending...
-                {:else}
-                Send Message
-                {/if}
-            </button>
+            <input type="submit" class="btn btn-primary btn-full" value="Send Message">
         </form>
-        {/if}
     </div>
 </div>
 
@@ -242,7 +185,9 @@
         color: var(--color-silver);
     }
 
-    .form-group input,
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
     .form-group select,
     .form-group textarea {
         padding: var(--space-md);
@@ -254,7 +199,9 @@
         transition: border-color var(--transition-fast);
     }
 
-    .form-group input:focus,
+    .form-group input[type="text"]:focus,
+    .form-group input[type="email"]:focus,
+    .form-group input[type="tel"]:focus,
     .form-group select:focus,
     .form-group textarea:focus {
         outline: none;
@@ -282,65 +229,47 @@
 
     .checkbox-group {
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .checkbox-label {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         gap: var(--space-sm);
         cursor: pointer;
         font-size: 0.95rem;
         text-transform: none;
         letter-spacing: 0;
+        color: var(--color-text-muted);
     }
 
     .checkbox-label input[type="checkbox"] {
         width: 20px;
         height: 20px;
+        min-width: 20px;
         cursor: pointer;
+        margin-top: 2px;
+    }
+
+    .terms-text {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .terms-text a {
+        color: var(--color-silver);
+        text-decoration: underline;
     }
 
     .btn-full {
         width: 100%;
         padding: var(--space-md) var(--space-xl);
-    }
-
-    .spinner {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        border: 2px solid transparent;
-        border-top-color: currentColor;
-        border-radius: 50%;
-        animation: spin 0.8s linear infinite;
-        margin-right: var(--space-xs);
-    }
-
-    @keyframes spin {
-        to { transform: rotate(360deg); }
-    }
-
-    .success-message {
-        text-align: center;
-        padding: var(--space-2xl);
-    }
-
-    .success-message svg {
-        color: var(--color-silver);
-        margin-bottom: var(--space-lg);
-    }
-
-    .success-message h3 {
+        cursor: pointer;
         font-family: var(--font-display);
-        font-size: 1.5rem;
-        color: var(--color-white);
-        margin-bottom: var(--space-md);
-    }
-
-    .success-message p {
-        color: var(--color-text-muted);
-        margin-bottom: var(--space-xl);
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
     }
 
     @media (max-width: 768px) {
