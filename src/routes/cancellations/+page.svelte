@@ -36,10 +36,11 @@
                         <div class="option-number">1</div>
                         <div class="option-content">
                             <h3>Visit the Gym in Person</h3>
-                            <p>Stop by during our operating hours to speak with a team member who can process your cancellation request.</p>
+                            <p>Stop by during our staffed hours to speak with a team member who can process your cancellation request.</p>
                             <div class="staffed-hours">
-                                <strong>Hours:</strong><br>
-                                4:00am - 11:00pm, 365 Days a Year
+                                <strong>Staffed Hours:</strong><br>
+                                Monday-Friday: 8:00am-9:00pm<br>
+                                Saturday-Sunday: 8:00am-6:00pm
                             </div>
                         </div>
                     </div>
@@ -50,7 +51,7 @@
                             <h3>Call Us Directly</h3>
                             <p>Contact us by phone to receive further instructions from our staff.</p>
                             <div class="contact-phone">
-                                <strong>Phone:</strong> <a href="tel:+17173647848">(717) 364-7848</a>
+                                <strong>Phone:</strong> <a href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a>
                             </div>
                         </div>
                     </div>
@@ -74,8 +75,8 @@
                 </p>
                 <div class="contact-info-legal">
                     <p><strong>Location:</strong> 3243 Hamilton Blvd, Allentown, PA 18103</p>
-                    <p><strong>Phone:</strong> <a href="tel:+17173647848">(717) 364-7848</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:support@elitetrainingcenter.org">support@elitetrainingcenter.org</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@rapidrecoveryelite.com">info@rapidrecoveryelite.com</a></p>
                 </div>
             </div>
 
@@ -87,162 +88,3 @@
         </div>
     </section>
 </div>
-
-<style>
-    .legal-page {
-        min-height: 100vh;
-        background: var(--color-bg);
-    }
-
-    .legal-hero {
-        padding: 150px var(--space-lg) var(--space-3xl);
-        background: var(--color-bg-alt);
-        text-align: center;
-    }
-
-    .legal-title {
-        font-family: var(--font-display);
-        font-size: clamp(2rem, 5vw, 3.5rem);
-        font-weight: 700;
-        color: var(--color-white);
-        margin-bottom: var(--space-md);
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-
-    .legal-subtitle {
-        color: var(--color-silver);
-        font-size: 1.1rem;
-    }
-
-    .legal-content {
-        padding: var(--space-3xl) var(--space-lg);
-    }
-
-    .legal-container {
-        max-width: 900px;
-        margin: 0 auto;
-    }
-
-    .legal-section {
-        margin-bottom: var(--space-2xl);
-        padding-bottom: var(--space-xl);
-        border-bottom: 1px solid var(--color-border);
-    }
-
-    .legal-section:last-of-type {
-        border-bottom: none;
-    }
-
-    .legal-section h2 {
-        font-family: var(--font-display);
-        font-size: 1.5rem;
-        color: var(--color-silver);
-        margin-bottom: var(--space-lg);
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    .legal-section h3 {
-        font-family: var(--font-display);
-        font-size: 1.1rem;
-        color: var(--color-white);
-        margin-bottom: var(--space-sm);
-    }
-
-    .legal-section p {
-        color: var(--color-text-muted);
-        line-height: 1.8;
-        margin-bottom: var(--space-md);
-    }
-
-    .highlight-section {
-        background: var(--color-bg-alt);
-        padding: var(--space-xl);
-        border-radius: 8px;
-        border: 1px solid var(--color-border);
-    }
-
-    .cancellation-options {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: var(--space-xl);
-        margin-top: var(--space-xl);
-    }
-
-    .cancellation-option {
-        display: flex;
-        gap: var(--space-lg);
-        align-items: flex-start;
-    }
-
-    .option-number {
-        width: 48px;
-        height: 48px;
-        min-width: 48px;
-        background: var(--color-silver);
-        color: var(--color-bg);
-        font-family: var(--font-display);
-        font-size: 1.5rem;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .option-content {
-        flex: 1;
-    }
-
-    .staffed-hours,
-    .contact-phone {
-        margin-top: var(--space-md);
-        padding: var(--space-md);
-        background: var(--color-bg);
-        border-left: 3px solid var(--color-silver);
-        color: var(--color-text);
-        font-size: 0.95rem;
-        line-height: 1.6;
-    }
-
-    .contact-phone a,
-    .contact-info-legal a {
-        color: var(--color-silver);
-        text-decoration: none;
-        transition: color var(--transition-fast);
-    }
-
-    .contact-phone a:hover,
-    .contact-info-legal a:hover {
-        color: var(--color-white);
-    }
-
-    .contact-info-legal {
-        background: var(--color-bg-alt);
-        padding: var(--space-lg);
-        border-left: 3px solid var(--color-silver);
-        margin-top: var(--space-lg);
-    }
-
-    .contact-info-legal p {
-        margin-bottom: var(--space-sm);
-    }
-
-    .legal-back {
-        display: flex;
-        gap: var(--space-md);
-        justify-content: center;
-        margin-top: var(--space-2xl);
-        padding-top: var(--space-xl);
-    }
-
-    @media (max-width: 768px) {
-        .cancellation-options {
-            grid-template-columns: 1fr;
-        }
-
-        .highlight-section {
-            padding: var(--space-lg);
-        }
-    }
-</style>

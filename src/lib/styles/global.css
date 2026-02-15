@@ -236,9 +236,6 @@ section {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .hero-video-container {

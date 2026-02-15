@@ -30,7 +30,7 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<section class="hero pt-hero" id="home" aria-labelledby="hero-title" style="background-image: url('{base}/images/elite_personal_training.jpg');">
+<section class="hero pt-hero" id="home" aria-labelledby="hero-title" style="background-image: url('{base}/images/personal_training_banner.jpg');">
     <div class="hero-overlay" aria-hidden="true"></div>
     
     <div class="hero-content">
@@ -134,7 +134,7 @@
         <p class="reviews-intro">Connect with one of our elite trainers and take your performance to the next level.</p>
         <div class="reviews-cta">
             <a href="{base}/#contact" class="btn btn-primary">Get Started</a>
-            <a href="{base}/#memberships" class="btn btn-secondary">View Memberships</a>
+            <a href="https://google.com" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Memberships</a>
         </div>
     </div>
 </section>

@@ -1,23 +1,66 @@
 <script>
-    export let variant = 'gym'; // 'gym' or 'pt'
+    import { base } from '$app/paths';
+    export let variant = 'gym';
     export let isPopup = false;
 
-    let submitted = false;
+    let formData = {
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        interest: '',
+        isUnder18: false,
+        message: ''
+    };
 
-    function onIframeLoad() {
-        // The hidden iframe has loaded (meaning the form was submitted).
-        // Show success message after a brief delay to ensure tracking captured it.
-        if (submitted) return;
+    let submitted = false;
+    let submitting = false;
+
+    const gymOptions = [
+        { value: '', label: 'How can we help you?' },
+        { value: 'free-tour', label: 'Free Tour' },
+        { value: 'membership', label: 'Membership Inquiry' },
+        { value: 'personal-training', label: 'Personal Training' },
+        { value: 'day-pass', label: 'Day Pass' },
+        { value: 'physical-therapy', label: 'Physical Therapy' },
+        { value: 'trainer-opportunity', label: 'Trainer Opportunity' },
+        { value: 'media-team', label: 'Media Team' },
+        { value: 'other', label: 'Other' }
+    ];
+
+    const ptOptions = [
+        { value: '', label: 'How can we help you?' },
+        { value: 'free-consult', label: 'Free Consultation' },
+        { value: 'initial-assessment', label: 'Initial Assessment' },
+        { value: 'follow-up', label: 'Follow-Up Session' },
+        { value: 'general-recovery', label: 'General Recovery & Performance' },
+        { value: 'elite-training', label: 'Elite Level Personal Training & Biomechanical Analysis' },
+        { value: 'question', label: 'General Question' },
+        { value: 'other', label: 'Other' }
+    ];
+
+    $: options = variant === 'pt' ? ptOptions : gymOptions;
+
+    async function handleSubmit() {
+        submitting = true;
+        await new Promise(resolve => setTimeout(resolve, 1000));
         submitted = true;
+        submitting = false;
     }
 
     function resetForm() {
+        formData = {
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            interest: '',
+            isUnder18: false,
+            message: ''
+        };
         submitted = false;
     }
 </script>
-
-<!-- Hidden iframe to absorb the form POST (prevents 405 on the page) -->
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" on:load={onIframeLoad} title="form target"></iframe>
 
 <div class="contact-form-wrapper" class:popup={isPopup}>
     <div class="contact-form-container">
@@ -39,104 +82,53 @@
             <button class="btn btn-secondary" on:click={resetForm}>Send Another Message</button>
         </div>
         {:else}
-        <form class="contact-form" method="POST" action="about:blank" target="hidden_iframe">
+        <form on:submit|preventDefault={handleSubmit} class="contact-form">
             <div class="form-row">
                 <div class="form-group">
-                    <label for="first_name">First Name <span class="required">*</span></label>
-                    <input 
-                        type="text" 
-                        id="first_name" 
-                        name="first_name"
-                        required
-                        placeholder="John"
-                    >
+                    <label for="firstName">First Name <span class="required">*</span></label>
+                    <input type="text" id="firstName" bind:value={formData.firstName} required placeholder="John">
                 </div>
                 <div class="form-group">
-                    <label for="last_name">Last Name <span class="required">*</span></label>
-                    <input 
-                        type="text" 
-                        id="last_name" 
-                        name="last_name"
-                        required
-                        placeholder="Doe"
-                    >
+                    <label for="lastName">Last Name <span class="required">*</span></label>
+                    <input type="text" id="lastName" bind:value={formData.lastName} required placeholder="Doe">
                 </div>
             </div>
-
             <div class="form-row">
                 <div class="form-group">
                     <label for="email">Email <span class="required">*</span></label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email"
-                        required
-                        placeholder="john@example.com"
-                    >
+                    <input type="email" id="email" bind:value={formData.email} required placeholder="john@example.com">
                 </div>
                 <div class="form-group">
-                    <label for="phone">Phone <span class="required">*</span></label>
-                    <input 
-                        type="tel" 
-                        id="phone" 
-                        name="phone"
-                        required
-                        placeholder="(555) 123-4567"
-                    >
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" bind:value={formData.phone} placeholder="(555) 123-4567">
                 </div>
             </div>
-
             <div class="form-group">
                 <label for="interest">How can we help you? <span class="required">*</span></label>
-                <select id="interest" name="interest" required>
-                    {#if variant === 'pt'}
-                        <option value="">Select an option...</option>
-                        <option value="Free Consultation">Free Consultation</option>
-                        <option value="Initial Assessment">Initial Assessment</option>
-                        <option value="Follow-Up Session">Follow-Up Session</option>
-                        <option value="General Recovery & Performance">General Recovery & Performance</option>
-                        <option value="Elite Personal Training & Biomechanical Analysis">Elite Personal Training & Biomechanical Analysis</option>
-                        <option value="General Question">General Question</option>
-                        <option value="Other">Other</option>
-                    {:else}
-                        <option value="">Select an option...</option>
-                        <option value="Free Tour">Free Tour</option>
-                        <option value="Membership Inquiry">Membership Inquiry</option>
-                        <option value="Personal Training">Personal Training</option>
-                        <option value="Day Pass">Day Pass</option>
-                        <option value="Physical Therapy">Physical Therapy</option>
-                        <option value="Trainer Opportunity">Trainer Opportunity</option>
-                        <option value="Media Team">Media Team</option>
-                        <option value="Other">Other</option>
-                    {/if}
+                <select id="interest" bind:value={formData.interest} required>
+                    {#each options as option}
+                    <option value={option.value}>{option.label}</option>
+                    {/each}
                 </select>
             </div>
-
             <div class="form-group checkbox-group">
                 <label class="checkbox-label">
-                    <input type="checkbox" name="under_18" value="yes">
-                    <span>I am under 18 years of age</span>
+                    <input type="checkbox" bind:checked={formData.isUnder18}>
+                    <span class="checkmark"></span>
+                    I am under 18 years of age
                 </label>
             </div>
-
-            <div class="form-group checkbox-group">
-                <label class="checkbox-label">
-                    <input type="checkbox" name="terms_and_conditions" value="yes" required>
-                    <span class="terms-text">I agree to the <a href={variant === 'pt' ? '/rapid-recovery-website/pt-privacy-policy' : '/rapid-recovery-website/privacy-policy'} target="_blank" rel="noopener noreferrer">terms & conditions</a>. By providing my phone number, I agree to receive text messages from the business.</span>
-                </label>
-            </div>
-
             <div class="form-group">
                 <label for="message">Message / Reason for Visit</label>
-                <textarea 
-                    id="message" 
-                    name="message"
-                    rows="4"
-                    placeholder="Tell us more about what you're looking for..."
-                ></textarea>
+                <textarea id="message" bind:value={formData.message} rows="4" placeholder="Tell us more about what you're looking for..."></textarea>
             </div>
-
-            <input type="submit" class="btn btn-primary btn-full" value="Send Message">
+            <button type="submit" class="btn btn-primary btn-full" disabled={submitting}>
+                {#if submitting}
+                <span class="spinner"></span> Sending...
+                {:else}
+                Send Message
+                {/if}
+            </button>
         </form>
         {/if}
     </div>
@@ -147,22 +139,18 @@
         padding: var(--space-3xl) var(--space-lg);
         background: var(--color-bg-alt);
     }
-
     .contact-form-wrapper.popup {
         padding: var(--space-xl);
         background: transparent;
     }
-
     .contact-form-container {
         max-width: 700px;
         margin: 0 auto;
     }
-
     .section-header {
         text-align: center;
         margin-bottom: var(--space-2xl);
     }
-
     .section-tag {
         font-family: var(--font-display);
         font-size: 0.875rem;
@@ -172,7 +160,6 @@
         color: var(--color-silver);
         margin-bottom: var(--space-sm);
     }
-
     .section-title {
         font-family: var(--font-display);
         font-size: clamp(2rem, 5vw, 3rem);
@@ -181,25 +168,21 @@
         text-transform: uppercase;
         color: var(--color-white);
     }
-
     .contact-form {
         display: flex;
         flex-direction: column;
         gap: var(--space-lg);
     }
-
     .form-row {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: var(--space-lg);
     }
-
     .form-group {
         display: flex;
         flex-direction: column;
         gap: var(--space-xs);
     }
-
     .form-group label {
         font-family: var(--font-display);
         font-size: 0.875rem;
@@ -208,14 +191,10 @@
         text-transform: uppercase;
         color: var(--color-text);
     }
-
     .required {
         color: var(--color-silver);
     }
-
-    .form-group input[type="text"],
-    .form-group input[type="email"],
-    .form-group input[type="tel"],
+    .form-group input,
     .form-group select,
     .form-group textarea {
         padding: var(--space-md);
@@ -226,21 +205,16 @@
         font-size: 1rem;
         transition: border-color var(--transition-fast);
     }
-
-    .form-group input[type="text"]:focus,
-    .form-group input[type="email"]:focus,
-    .form-group input[type="tel"]:focus,
+    .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus {
         outline: none;
         border-color: var(--color-silver);
     }
-
     .form-group input::placeholder,
     .form-group textarea::placeholder {
         color: var(--color-text-muted);
     }
-
     .form-group select {
         cursor: pointer;
         appearance: none;
@@ -249,84 +223,67 @@
         background-position: right var(--space-md) center;
         padding-right: var(--space-2xl);
     }
-
     .form-group select option {
         background: var(--color-bg);
         color: var(--color-white);
     }
-
     .checkbox-group {
         flex-direction: row;
-        align-items: flex-start;
+        align-items: center;
     }
-
     .checkbox-label {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         gap: var(--space-sm);
         cursor: pointer;
         font-size: 0.95rem;
         text-transform: none;
         letter-spacing: 0;
-        color: var(--color-text-muted);
     }
-
     .checkbox-label input[type="checkbox"] {
         width: 20px;
         height: 20px;
-        min-width: 20px;
         cursor: pointer;
-        margin-top: 2px;
     }
-
-    .terms-text {
-        font-size: 0.85rem;
-        line-height: 1.5;
-    }
-
-    .terms-text a {
-        color: var(--color-silver);
-        text-decoration: underline;
-    }
-
     .btn-full {
         width: 100%;
         padding: var(--space-md) var(--space-xl);
-        cursor: pointer;
-        font-family: var(--font-display);
-        font-size: 1rem;
-        font-weight: 600;
-        letter-spacing: 2px;
-        text-transform: uppercase;
     }
-
+    .spinner {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 2px solid transparent;
+        border-top-color: currentColor;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+        margin-right: var(--space-xs);
+    }
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
     .success-message {
         text-align: center;
         padding: var(--space-2xl);
     }
-
     .success-message svg {
         color: var(--color-silver);
         margin-bottom: var(--space-lg);
     }
-
     .success-message h3 {
         font-family: var(--font-display);
         font-size: 1.5rem;
         color: var(--color-white);
         margin-bottom: var(--space-md);
     }
-
     .success-message p {
         color: var(--color-text-muted);
         margin-bottom: var(--space-xl);
     }
-
     @media (max-width: 768px) {
         .form-row {
             grid-template-columns: 1fr;
         }
-
         .contact-form-wrapper {
             padding: var(--space-2xl) var(--space-md);
         }

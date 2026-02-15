@@ -116,7 +116,7 @@
         <p class="reviews-intro">Connect with like-minded entrepreneurs and grow your business within our community.</p>
         <div class="reviews-cta">
             <a href="{base}/#contact" class="btn btn-primary">Join the Network</a>
-            <a href="{base}/#memberships" class="btn btn-secondary">Become a Member</a>
+            <a href="https://google.com" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Become a Member</a>
         </div>
     </div>
 </section>

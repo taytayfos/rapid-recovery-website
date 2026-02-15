@@ -5,14 +5,12 @@
     import Dialog from '$lib/components/Dialog.svelte';
 
     let promoDialog;
-    let promoShown = false;
 
     onMount(() => {
         // Show promo popup after 15 seconds
-        const promoTimer = setTimeout(() => {
-            if (!promoShown && promoDialog) {
+        const promoTimeout = setTimeout(() => {
+            if (promoDialog) {
                 promoDialog.showModal();
-                promoShown = true;
             }
         }, 15000);
 
@@ -33,8 +31,8 @@
         checkReveal();
 
         return () => {
-            clearTimeout(promoTimer);
             window.removeEventListener('scroll', checkReveal);
+            clearTimeout(promoTimeout);
         };
     });
 </script>
@@ -166,7 +164,7 @@
     </div>
     <div class="features-grid">
         <a href="{base}/facilities#equipment" class="feature-card reveal">
-            <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=600&q=80" alt="Hand-picked equipment">
+            <img src="{base}/images/faculty.jpg" alt="Hand-picked equipment">
             <div class="feature-overlay">
                 <h3>Hand Picked Equipment</h3>
                 <p>Custom pieces from around the world</p>
@@ -208,7 +206,7 @@
     <div class="presale-banner reveal">
         <h3>🎉 Presale Now Live</h3>
         <ul class="presale-list">
-            <li>Members 1-100 locked in at <strong>$75/mo FOREVER</strong></li>
+            <li>First 100 members locked in at <strong>$75/mo FOREVER</strong></li>
             <li>If membership cap is reached before opening, 5 lucky members will get a whole year membership for free!</li>
             <li>Waived $100 application fee included</li>
             <li>Early access to the gym prior to grand opening included</li>
@@ -222,7 +220,7 @@
         <article class="membership-card featured reveal">
             <span class="membership-badge">Best Value</span>
             <h3 class="membership-name">12-Month Contract</h3>
-            <p class="membership-price">$125<span>/month</span></p>
+            <p class="membership-price">$99<span>/month</span></p>
             <p class="membership-period">Billed monthly for 12 months</p>
             <ul class="membership-features">
                 <li>4:00am - 11:00pm gym access</li>
@@ -231,12 +229,12 @@
                 <li>Free parking</li>
                 <li>Lowest monthly rate</li>
             </ul>
-            <a href="#contact" class="btn btn-primary">Join Now</a>
+            <a href="https://google.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join Now</a>
         </article>
 
         <article class="membership-card reveal">
             <h3 class="membership-name">Month-to-Month</h3>
-            <p class="membership-price">$150<span>/month</span></p>
+            <p class="membership-price">$125<span>/month</span></p>
             <p class="membership-period">Cancel anytime</p>
             <ul class="membership-features">
                 <li>4:00am - 11:00pm gym access</li>
@@ -245,7 +243,7 @@
                 <li>Free parking</li>
                 <li>No long-term commitment</li>
             </ul>
-            <a href="#contact" class="btn btn-primary">Join Now</a>
+            <a href="https://google.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join Now</a>
         </article>
 
         <article class="membership-card reveal">
@@ -258,7 +256,7 @@
                 <li>Posing room access</li>
                 <li>Free parking</li>
             </ul>
-            <a href="#contact" class="btn btn-secondary">Get Pass</a>
+            <a href="https://google.com" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Get Pass</a>
         </article>
     </div>
 
@@ -267,7 +265,7 @@
         <div class="pass-grid">
             <div class="pass-option">
                 <h4>Single Month Purchase</h4>
-                <p class="pass-price">$250</p>
+                <p class="pass-price">$150</p>
             </div>
             <div class="pass-option">
                 <h4>10x Visit Punch Pass</h4>
@@ -275,11 +273,11 @@
             </div>
             <div class="pass-option">
                 <h4>Consecutive Week Pass</h4>
-                <p class="pass-price">$125</p>
+                <p class="pass-price">$105</p>
             </div>
             <div class="pass-option">
                 <h4>Consecutive 3 Day Pass</h4>
-                <p class="pass-price">$75</p>
+                <p class="pass-price">$60</p>
             </div>
         </div>
     </div>
@@ -369,7 +367,7 @@
         </div>
         <div class="location-cta">
             <a href="https://maps.google.com/?q=3243+Hamilton+Blvd+Allentown+PA+18103" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Get Directions</a>
-            <a href="#contact" class="btn btn-secondary">Purchase Day Pass</a>
+            <a href="https://google.com" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Purchase Day Pass</a>
         </div>
     </div>
 </section>
@@ -379,12 +377,14 @@
     <ContactForm variant="gym" />
 </section>
 
-<!-- Promo Popup -->
+<!-- Promo Popup Dialog -->
 <Dialog bind:dialog={promoDialog}>
-    <div class="promo-popup">
-        <h3 class="promo-title">Waived Initiation/Application Fee</h3>
-        <p class="promo-text">Want to save $100? Schedule a tour with us and when you sign up for a contracted or non-contracted membership we will waive your $100 Initiation/Application Fee.</p>
+    <div class="promo-popup-content">
+        <h3>Waived Initiation/Application Fee</h3>
+        <p class="promo-highlight">Want to save $100?</p>
+        <p>Schedule a tour with us and when you sign up for a contracted or non-contracted membership we will waive your $100 Initiation/Application Fee!</p>
         <a href="#contact" class="btn btn-primary" on:click={() => promoDialog.close()}>Schedule a Tour</a>
+        <button class="btn btn-text" on:click={() => promoDialog.close()}>Maybe Later</button>
     </div>
 </Dialog>
 
@@ -482,17 +482,6 @@
         font-size: 1.1rem;
     }
 
-    .staffed-hours-list {
-        list-style: none;
-        padding: 0;
-        margin: var(--space-sm) 0;
-    }
-
-    .staffed-hours-list li {
-        padding: var(--space-xs) 0;
-        color: var(--color-text-muted);
-    }
-
     .reviews-placeholder {
         padding: var(--space-xl);
         background: var(--color-bg-alt);
@@ -518,6 +507,50 @@
         margin: 0 auto var(--space-xl);
     }
 
+    .promo-popup-content {
+        text-align: center;
+    }
+
+    .promo-popup-content h3 {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        color: var(--color-silver);
+        margin-bottom: var(--space-md);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .promo-popup-content .promo-highlight {
+        font-size: 1.3rem;
+        color: var(--color-white);
+        font-weight: 600;
+        margin-bottom: var(--space-sm);
+    }
+
+    .promo-popup-content p {
+        color: var(--color-text-muted);
+        margin-bottom: var(--space-lg);
+        line-height: 1.7;
+    }
+
+    .promo-popup-content .btn {
+        display: block;
+        margin: 0 auto var(--space-md);
+    }
+
+    .btn-text {
+        background: none;
+        border: none;
+        color: var(--color-text-muted);
+        cursor: pointer;
+        font-size: 0.9rem;
+        text-decoration: underline;
+    }
+
+    .btn-text:hover {
+        color: var(--color-white);
+    }
+
     @media (max-width: 768px) {
         .formula-image img {
             max-width: 280px;
@@ -526,26 +559,5 @@
         .presale-banner {
             padding: var(--space-lg);
         }
-    }
-
-    .promo-popup {
-        text-align: center;
-        padding: var(--space-lg) 0;
-    }
-
-    .promo-title {
-        font-family: var(--font-display);
-        font-size: 1.5rem;
-        color: var(--color-silver);
-        margin-bottom: var(--space-lg);
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-
-    .promo-text {
-        color: var(--color-text);
-        line-height: 1.7;
-        margin-bottom: var(--space-xl);
-        font-size: 1.05rem;
     }
 </style>
