@@ -43,7 +43,7 @@
             Every detail designed for elite performance
         </p>
         <div class="hero-buttons">
-            <a href="https://google.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join Now</a>
+            <a href="https://form.jotform.com/260487862745066" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join Now</a>
             <a href="{base}/#contact" class="btn btn-secondary">Book a Tour</a>
         </div>
     </div>
@@ -166,7 +166,7 @@
     <div class="cta-content reveal">
         <p class="cta-text">See our world-class equipment and facilities for yourself. Book a tour or start your membership today.</p>
         <div class="cta-buttons">
-            <a href="https://google.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join Now</a>
+            <a href="https://form.jotform.com/260487862745066" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join Now</a>
             <a href="{base}/#contact" class="btn btn-secondary">Book a Tour</a>
         </div>
     </div>

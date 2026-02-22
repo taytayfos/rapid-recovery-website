@@ -203,8 +203,8 @@
     </div>
 
     <!-- Presale Banner -->
-    <div class="presale-banner reveal">
-        <h3>🎉 Presale Now Live</h3>
+    <a href="https://form.jotform.com/260487862745066" class="presale-banner reveal" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;display:block;cursor:pointer;">
+        <h3>🎉 Pre-sale Coming Soon</h3>
         <ul class="presale-list">
             <li>First 100 members locked in at <strong>$75/mo FOREVER</strong></li>
             <li>If membership cap is reached before opening, 5 lucky members will get a whole year membership for free!</li>
@@ -214,7 +214,7 @@
             <li>Free T-shirt included</li>
             <li>Surprise gift worth $100 included</li>
         </ul>
-    </div>
+    </a>
 
     <div class="memberships-grid">
         <article class="membership-card featured reveal">
@@ -229,7 +229,7 @@
                 <li>Free parking</li>
                 <li>Lowest monthly rate</li>
             </ul>
-            <a href="https://google.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join Now</a>
+            <a href="https://form.jotform.com/260487862745066" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join Now</a>
         </article>
 
         <article class="membership-card reveal">
@@ -243,7 +243,7 @@
                 <li>Free parking</li>
                 <li>No long-term commitment</li>
             </ul>
-            <a href="https://google.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join Now</a>
+            <a href="https://form.jotform.com/260487862745066" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join Now</a>
         </article>
 
         <article class="membership-card reveal">
@@ -256,7 +256,7 @@
                 <li>Posing room access</li>
                 <li>Free parking</li>
             </ul>
-            <a href="https://google.com" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Get Pass</a>
+            <a href="https://form.jotform.com/260487862745066" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Get Pass</a>
         </article>
     </div>
 
@@ -367,14 +367,38 @@
         </div>
         <div class="location-cta">
             <a href="https://maps.google.com/?q=3243+Hamilton+Blvd+Allentown+PA+18103" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Get Directions</a>
-            <a href="https://google.com" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Purchase Day Pass</a>
+            <a href="https://form.jotform.com/260487862745066" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Purchase Day Pass</a>
         </div>
     </div>
 </section>
 
 <!-- Contact Section -->
 <section id="contact">
-    <ContactForm variant="gym" />
+    <div class="embedded-contact-wrapper">
+        <div class="embedded-contact-container">
+            <div class="section-header" style="text-align:center;margin-bottom:2rem;">
+                <p class="section-tag">Get In Touch</p>
+                <h2 class="section-title">Contact Us</h2>
+            </div>
+            <iframe
+                src="https://link.elitetrainingcenter.org/widget/form/2AnCjIOznpGIkT1cgNRa"
+                style="width:100%;height:731px;border:none;border-radius:3px"
+                id="inline-2AnCjIOznpGIkT1cgNRa"
+                data-layout={"{'id':'INLINE'}"}
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Contact Us"
+                data-height="731"
+                data-layout-iframe-id="inline-2AnCjIOznpGIkT1cgNRa"
+                data-form-id="2AnCjIOznpGIkT1cgNRa"
+                title="Contact Us"
+            ></iframe>
+        </div>
+    </div>
 </section>
 
 <!-- Promo Popup Dialog -->
@@ -559,5 +583,14 @@
         .presale-banner {
             padding: var(--space-lg);
         }
+    }
+
+    .embedded-contact-wrapper {
+        padding: var(--space-3xl) var(--space-lg);
+        background: var(--color-bg-alt);
+    }
+    .embedded-contact-container {
+        max-width: 700px;
+        margin: 0 auto;
     }
 </style>

@@ -248,7 +248,31 @@
 </section>
 
 <section id="contact">
-    <ContactForm variant="pt" />
+    <div class="embedded-contact-wrapper">
+        <div class="embedded-contact-container">
+            <div class="section-header" style="text-align:center;margin-bottom:2rem;">
+                <p class="section-tag">Get In Touch</p>
+                <h2 class="section-title">Contact Us</h2>
+            </div>
+            <iframe
+                src="https://link.elitetrainingcenter.org/widget/form/rfNkhvIfrNBlK2dhhBYS"
+                style="width:100%;height:681px;border:none;border-radius:3px"
+                id="inline-rfNkhvIfrNBlK2dhhBYS"
+                data-layout={"{'id':'INLINE'}"}
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Contact Us - Physical Therapy"
+                data-height="681"
+                data-layout-iframe-id="inline-rfNkhvIfrNBlK2dhhBYS"
+                data-form-id="rfNkhvIfrNBlK2dhhBYS"
+                title="Contact Us - Physical Therapy"
+            ></iframe>
+        </div>
+    </div>
 </section>
 
 <Dialog bind:dialog={consultDialog}>
@@ -318,5 +342,14 @@
     }
     .btn-text:hover {
         color: var(--color-white);
+    }
+
+    .embedded-contact-wrapper {
+        padding: var(--space-3xl) var(--space-lg);
+        background: var(--color-bg-alt);
+    }
+    .embedded-contact-container {
+        max-width: 700px;
+        margin: 0 auto;
     }
 </style>

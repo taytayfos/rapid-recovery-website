@@ -134,7 +134,7 @@
         <p class="reviews-intro">Connect with one of our elite trainers and take your performance to the next level.</p>
         <div class="reviews-cta">
             <a href="{base}/#contact" class="btn btn-primary">Get Started</a>
-            <a href="https://google.com" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Memberships</a>
+            <a href="https://form.jotform.com/260487862745066" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Memberships</a>
         </div>
     </div>
 </section>
