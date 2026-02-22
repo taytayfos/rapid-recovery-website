@@ -7,6 +7,13 @@
     let consultDialog;
 
     onMount(() => {
+        // Re-initialize form embed script for SPA navigation
+        const existingScript = document.querySelector('script[src="https://link.elitetrainingcenter.org/js/form_embed.js"]');
+        if (existingScript) existingScript.remove();
+        const formScript = document.createElement('script');
+        formScript.src = 'https://link.elitetrainingcenter.org/js/form_embed.js';
+        document.body.appendChild(formScript);
+
         const timeout = setTimeout(() => {
             if (consultDialog) {
                 consultDialog.showModal();
