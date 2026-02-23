@@ -388,21 +388,11 @@
                 <h2 class="section-title">Contact Us</h2>
             </div>
             <iframe
-                src="https://link.elitetrainingcenter.org/widget/form/2AnCjIOznpGIkT1cgNRa"
-                style="width:100%;height:731px;border:none;border-radius:3px"
-                id="inline-2AnCjIOznpGIkT1cgNRa"
-                data-layout={"{'id':'INLINE'}"}
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name="Contact Us"
-                data-height="731"
-                data-layout-iframe-id="inline-2AnCjIOznpGIkT1cgNRa"
-                data-form-id="2AnCjIOznpGIkT1cgNRa"
-                title="Contact Us"
+                src="https://link.elitetrainingcenter.org/widget/survey/Hx13tAAZ3wJEUOOBrdQV"
+                style="border:none;width:100%;"
+                scrolling="no"
+                id="Hx13tAAZ3wJEUOOBrdQV"
+                title="survey"
             ></iframe>
         </div>
     </div>
