@@ -206,7 +206,7 @@
     <div class="section-header reveal">
         <p class="section-tag">Memberships & Passes</p>
         <h2 class="section-title" id="memberships-title">Choose Your Path</h2>
-        <p class="section-description">Become Elite. Join Rapid Recovery and unlock your full potential. Limited to 500 members.</p>
+        <p class="section-description">Become Elite. Join The Elite Training Center and unlock your full potential. Limited to 500 members.</p>
     </div>
 
     <!-- Presale Banner -->
@@ -270,10 +270,6 @@
     <div class="additional-passes reveal">
         <h3 class="section-subtitle">Additional Pass Options</h3>
         <div class="pass-grid">
-            <div class="pass-option">
-                <h4>Single Month Purchase</h4>
-                <p class="pass-price">$150</p>
-            </div>
             <div class="pass-option">
                 <h4>10x Visit Punch Pass</h4>
                 <p class="pass-price">$200</p>

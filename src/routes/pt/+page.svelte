@@ -58,7 +58,7 @@
         <p class="hero-description">Led by Dr. Taylor Foster, DPT, CSCS</p>
         <div class="hero-buttons">
             <a href="#services" class="btn btn-primary">Our Services</a>
-            <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book Session</a>
+            <a href="#contact" class="btn btn-secondary">Book Session</a>
         </div>
     </div>
     <div class="hero-scroll" aria-hidden="true">
@@ -136,7 +136,7 @@
                 <li>Learn about our services</li>
                 <li>No obligation</li>
             </ul>
-            <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book Free Consult</a>
+            <a href="#contact" class="btn btn-secondary">Book Free Consult</a>
         </article>
 
         <article class="pricing-card featured reveal">
@@ -151,7 +151,7 @@
                 <li>Custom exercise program</li>
                 <li>Treatment plan development</li>
             </ul>
-            <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Now</a>
+            <a href="#contact" class="btn btn-primary">Book Now</a>
         </article>
 
         <article class="pricing-card reveal">
@@ -164,7 +164,7 @@
                 <li>Hands-on manual therapy</li>
                 <li>Custom exercise program</li>
             </ul>
-            <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book Now</a>
+            <a href="#contact" class="btn btn-secondary">Book Now</a>
         </article>
 
         <article class="pricing-card reveal">
@@ -178,7 +178,7 @@
                 <li>Continued treatment</li>
                 <li>Program adjustments</li>
             </ul>
-            <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book Now</a>
+            <a href="#contact" class="btn btn-secondary">Book Now</a>
         </article>
 
         <article class="pricing-card reveal">
@@ -191,7 +191,7 @@
                 <li>Continued treatment</li>
                 <li>Program adjustments</li>
             </ul>
-            <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book Now</a>
+            <a href="#contact" class="btn btn-secondary">Book Now</a>
         </article>
 
         <article class="pricing-card reveal">
@@ -205,7 +205,7 @@
                 <li>Targeted manual therapy</li>
                 <li>Performance optimization</li>
             </ul>
-            <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book Now</a>
+            <a href="#contact" class="btn btn-secondary">Book Now</a>
         </article>
 
         <article class="pricing-card reveal">
@@ -219,7 +219,7 @@
                 <li>Performance optimization</li>
                 <li>Recovery enhancement</li>
             </ul>
-            <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book Now</a>
+            <a href="#contact" class="btn btn-secondary">Book Now</a>
         </article>
 
         <article class="pricing-card reveal">
@@ -233,7 +233,7 @@
                 <li>Corrective strategies</li>
                 <li>Personalized programming</li>
             </ul>
-            <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book Now</a>
+            <a href="#contact" class="btn btn-secondary">Book Now</a>
         </article>
     </div>
     <div class="pricing-note reveal">
@@ -244,13 +244,21 @@
 <section class="reviews-section" id="reviews">
     <div class="section-header reveal">
         <p class="section-tag">Testimonials</p>
-        <h2 class="section-title">What Our Patients Say</h2>
+        <h2 class="section-title">Don't Take Our Word For It, Check Out These Reviews From Our Previous Patients & Clients!</h2>
     </div>
-    <div class="reviews-content reveal">
-        <p class="reviews-intro">See what our patients are saying about Rapid Recovery: Sports Therapy and Performance</p>
-        <div class="reviews-cta">
-            <a href="https://g.co/kgs/cnMBPWU" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Google Reviews</a>
-        </div>
+    <div class="reviews-widget reveal">
+        <iframe
+            id="msgsndr_reviews"
+            src="https://backend.leadconnectorhq.com/appengine/reviews/get_widget/QWCXhqVIJwvud0EmvvoF"
+            frameborder="0"
+            scrolling="no"
+            style="min-width:100%;width:100%;"
+            height="1157"
+            title="Patient Reviews"
+        ></iframe>
+    </div>
+    <div class="reviews-cta reveal" style="text-align:center;margin-top:2rem;">
+        <a href="https://maps.app.goo.gl/BEuPQp7cdsnNf3m86?g_st=ic" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Google Reviews</a>
     </div>
 </section>
 
@@ -259,7 +267,7 @@
         <div class="embedded-contact-container">
             <div class="section-header" style="text-align:center;margin-bottom:2rem;">
                 <p class="section-tag">Get In Touch</p>
-                <h2 class="section-title">Contact Us</h2>
+                <h2 class="section-title">Please Fill Out This Form for Booking</h2>
             </div>
             <iframe
                 src="https://link.elitetrainingcenter.org/widget/form/rfNkhvIfrNBlK2dhhBYS"
@@ -286,7 +294,7 @@
     <div class="consult-popup-content">
         <h3>Free 15-Minute Consultation</h3>
         <p>Discover how Dr. Taylor Foster can help you achieve your performance and recovery goals — at no cost to you.</p>
-        <a href="https://book.squareup.com/appointments/rrr22fknem9h56/location/LQXFF46VTK5AD/services" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Free Consult</a>
+        <a href="#contact" class="btn btn-primary" on:click={() => consultDialog.close()}>Book Free Consult</a>
         <button class="btn btn-text" on:click={() => consultDialog.close()}>Maybe Later</button>
     </div>
 </Dialog>
@@ -306,14 +314,9 @@
         padding: var(--space-3xl) var(--space-lg);
         background: var(--color-bg);
     }
-    .reviews-content {
-        text-align: center;
-        max-width: 600px;
+    .reviews-widget {
+        max-width: 900px;
         margin: 0 auto;
-    }
-    .reviews-intro {
-        color: var(--color-text-muted);
-        margin-bottom: var(--space-xl);
     }
     .reviews-cta {
         display: flex;
