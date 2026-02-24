@@ -30,7 +30,7 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<section class="hero pt-hero" id="home" aria-labelledby="hero-title" style="background-image: url('{base}/images/personal_training_banner.jpg');">
+<section class="hero pt-hero" id="home" aria-labelledby="hero-title" style="background-image: url('{base}/images/elite_personal_training.jpg');">
     <div class="hero-overlay" aria-hidden="true"></div>
     
     <div class="hero-content">
