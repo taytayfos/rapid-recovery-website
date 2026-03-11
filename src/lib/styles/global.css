@@ -305,6 +305,13 @@ section {
     animation: fadeInUp 0.8s 0.2s forwards;
 }
 
+.hero-subtitle-large {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    letter-spacing: 4px;
+    margin-bottom: var(--space-sm);
+    animation: fadeInUp 0.8s 0.4s forwards;
+}
+
 .hero-title {
     font-family: var(--font-display);
     font-size: clamp(3rem, 10vw, 7rem);
@@ -314,7 +321,7 @@ section {
     text-transform: uppercase;
     margin-bottom: var(--space-lg);
     opacity: 0;
-    animation: fadeInUp 0.8s 0.4s forwards;
+    animation: fadeInUp 0.8s 0.2s forwards;
 }
 
 .hero-title .line {

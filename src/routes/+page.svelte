@@ -54,11 +54,11 @@
     <div class="hero-overlay" aria-hidden="true"></div>
     
     <div class="hero-content">
-        <p class="hero-subtitle">Welcome to the Elite Training Center</p>
         <h1 class="hero-title" id="hero-title">
-            <span class="line">Home of the</span>
-            <span class="highlight">Iron Athlete</span>
+            <span class="line">Welcome to the</span>
+            <span class="highlight">Elite Training Center</span>
         </h1>
+        <p class="hero-subtitle hero-subtitle-large">Home of the Iron Athlete</p>
         <p class="hero-description">
             Private 18+ Only Gym · Capped at 500 Members
         </p>
@@ -121,7 +121,7 @@
                 Here, you don't.
             </p>
             <p class="about-text">
-                We believe in quality > quantity — fewer members, better environment, stronger community.
+                We believe in quality > quantity — fewer members, elite environment, stronger community.
             </p>
             <p class="about-text">
                 We want the best members and the best for our members — people serious about performance, growth, and excellence.
@@ -181,7 +181,7 @@
             <img src="{base}/images/turf.jpg" alt="Turf area">
             <div class="feature-overlay">
                 <h3>Generous Turf Area</h3>
-                <p>150 sq ft dedicated movement space</p>
+                <p>Expansive dedicated movement space</p>
             </div>
         </a>
         <a href="{base}/facilities#recovery" class="feature-card reveal">
@@ -291,7 +291,7 @@
 
     <div class="addon-option reveal">
         <h4>Guest Privileges Add-on</h4>
-        <p>$30/month - Bring one guest per 24 hour period on weekends and holidays (member must be present, guests must complete waiver)</p>
+        <p>$30/month - Bring 1 guest a week (member must be present, guests must complete waiver)</p>
     </div>
 
     <div class="age-requirements reveal">
@@ -327,10 +327,10 @@
                 <img src="{base}/images/hailie_profile_pic.jpg" alt="Hailie Foster" loading="lazy" style="object-position: 30% center;">
             </div>
             <div class="owner-bio">
-                <h3>Hailie Foster, PA-C</h3>
+                <h3>Hailie Foster, PA-C, MSPAS</h3>
                 <p>Hailie Foster is a board-certified Physician Assistant who serves full-time in Emergency Medicine, where she dedicates her life to helping others in their most critical moments. Her work is grounded in faith, compassion, and an unwavering commitment to excellence — values that extend far beyond the ER.</p>
                 <p>Hailie plays an integral role in Rapid Recovery's foundation and vision. She embodies the heart behind the brand — faith-driven, resilient, and relentlessly committed to bettering the lives of others.</p>
-                <p>Outside of medicine, Hailie is a competitive figure athlete and helps lead the "Get to Know the Members" podcast series, sharing authentic conversations that highlight the people, stories, and community that make Rapid Recovery special.</p>
+                <p>Outside of medicine, Hailie is a competitive figure athlete, wife to Taylor, owner of two fluffy dogs, and helps lead the "Get to Know the Members" podcast series, sharing authentic conversations that highlight the people, stories, and community that make Rapid Recovery special.</p>
                 <p>Her ability to balance life-saving medicine, faith, and family is a reflection of what Rapid Recovery stands for — purpose, discipline, and the pursuit of something greater than ourselves.</p>
             </div>
         </div>
@@ -361,8 +361,8 @@
         <h2 class="section-title" id="location-title">Location and Parking</h2>
     </div>
     <div class="location-content reveal">
-        <p class="location-text">We know you can't wait to get here — but let's make sure you actually find us first. Rapid Recovery: Elite Training Center is located at <strong>3243 Hamilton Blvd, Allentown, PA 18103</strong> — tucked away in the back of the plaza for a little extra exclusivity. Think of it as a hidden gem… because that's exactly what it is.</p>
-        <p class="location-text">You can access us from Hamilton Blvd, which runs behind the plaza. Just pull in, drive straight toward the rear, and look for our signage and entryway.</p>
+        <p class="location-text">We know you can't wait to get here — but let's make sure you actually find us first. Rapid Recovery: Elite Training Center is located at <strong>3243 Hamilton Blvd, Allentown, PA 18103</strong> — tucked away in the back of the Dorneyville Shopping Center for a little extra exclusivity. Think of it as a hidden gem… because that's exactly what it is.</p>
+        <p class="location-text">You can access us from Hamilton Blvd, which runs behind the Dorneyville Shopping Center. Just pull in, drive straight toward the rear, and look for our signage and entryway.</p>
         <p class="location-text">There's limited parking in front of our space so you may need to park in the side lot and walk over depending on how busy we are.</p>
         <div class="location-hours">
             <h4>Hours of Operation:</h4>

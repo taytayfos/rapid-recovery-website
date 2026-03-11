@@ -61,7 +61,7 @@
     </div>
     <div class="equipment-content reveal">
         <p class="equipment-text">
-            Every piece of equipment in this facility was hand-selected by Dr. Taylor Foster — not ordered from a catalog or bought in bulk. We source globally from companies like Gym80 (Germany), Prime Fitness, Watson Gym Equipment (UK), Atlantis, Gymleco (Sweden), Nautilus, and beyond.
+            Every piece of equipment in this facility was hand-selected by Dr. Taylor Foster — not ordered from a catalog or bought in bulk. We source globally from companies like Gym80 (Germany), Prime Fitness, Watson Gym Equipment (UK), Megamass, Gymleco (Sweden), Nautilus, and beyond.
         </p>
         <p class="equipment-text">
             From rare machines you won't find anywhere else in the Lehigh Valley, to classic staples built to last forever — this isn't a gym thrown together by a franchise template. This is a curated collection of equipment designed to maximize performance, target every muscle group effectively, and stand up to serious use by serious lifters.
@@ -80,7 +80,7 @@
             <h2 class="section-title" id="turf-title">Generous Turf Area</h2>
             <h3 class="section-subtitle">The Turf Zone: Movement Meets Performance</h3>
             <p class="about-text">
-                Our 150-square-foot turf zone is dedicated to the foundation of performance — movement. This space was designed for warm-ups, mobility work, lunges, sled pushes, stretching, and dynamic prep before your lift or recovery session.
+                Our expansive turf zone is dedicated to the foundation of performance — movement. This space was designed for warm-ups, mobility work, lunges, sled pushes, stretching, and dynamic prep before your lift or recovery session.
             </p>
             <p class="about-text">
                 Whether you're loosening up your hips before heavy squats, dialing in movement patterns during rehab, or finishing your workout with core and stability work, the turf area provides the space and freedom to move with intention.

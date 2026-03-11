@@ -17,6 +17,7 @@
                 {/if}
             </p>
             <div class="footer-details">
+                <p class="footer-shopping-center">Dorneyville Shopping Center</p>
                 <p>3243 Hamilton Blvd</p>
                 <p>Allentown, PA 18103</p>
                 <p><a href="tel:+16107986815">(610) 798-6815</a></p>
@@ -128,6 +129,12 @@
         color: var(--color-text-muted);
         margin-bottom: var(--space-xs);
         font-size: 0.9rem;
+    }
+    .footer-shopping-center {
+        color: var(--color-silver) !important;
+        font-weight: 600;
+        font-size: 0.95rem !important;
+        margin-bottom: var(--space-xs);
     }
     .footer-details a {
         color: var(--color-text-muted);
