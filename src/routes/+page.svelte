@@ -211,7 +211,7 @@
 
     <!-- Presale Banner -->
     <a href="https://form.jotform.com/260487862745066" class="presale-banner reveal" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;display:block;cursor:pointer;">
-        <h3>🎉 Pre-sale Coming Soon</h3>
+        <h3>🎉 Pre-sale Launching Wednesday 4/29</h3>
         <ul class="presale-list">
             <li>First 100 members locked in at <strong>$75/mo FOREVER</strong></li>
             <li>If membership cap is reached before opening, 5 lucky members will get a whole year membership for free!</li>
