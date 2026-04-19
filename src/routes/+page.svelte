@@ -230,7 +230,7 @@
             <p class="membership-price">$99<span>/month</span></p>
             <p class="membership-period">Billed monthly for 12 months</p>
             <ul class="membership-features">
-                <li>4:00am - 11:00pm gym access</li>
+                <li>4:00am - 10:00pm gym access</li>
                 <li>Full recovery lounge access</li>
                 <li>Posing room access</li>
                 <li>Free parking</li>
@@ -244,7 +244,7 @@
             <p class="membership-price">$125<span>/month</span></p>
             <p class="membership-period">Cancel anytime</p>
             <ul class="membership-features">
-                <li>4:00am - 11:00pm gym access</li>
+                <li>4:00am - 10:00pm gym access</li>
                 <li>Full recovery lounge access</li>
                 <li>Posing room access</li>
                 <li>Free parking</li>
@@ -263,7 +263,7 @@
                 <li>Posing room access</li>
                 <li>Free parking</li>
             </ul>
-            <a href="https://form.jotform.com/260487862745066" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Get Pass</a>
+            <a href="https://form.jotform.com/260487862745066" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">See Front Desk for Pass</a>
         </article>
     </div>
 
