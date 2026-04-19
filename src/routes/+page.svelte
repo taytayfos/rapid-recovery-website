@@ -366,7 +366,7 @@
         <p class="location-text">There's limited parking in front of our space so you may need to park in the side lot and walk over depending on how busy we are.</p>
         <div class="location-hours">
             <h4>Hours of Operation:</h4>
-            <p><strong>4:00am - 11:00pm, 365 Days a Year</strong></p>
+            <p><strong>4:00am - 10:00pm, 365 Days a Year</strong></p>
         </div>
         <div class="location-cta">
             <a href="https://maps.google.com/?q=3243+Hamilton+Blvd+Allentown+PA+18103" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Get Directions</a>
