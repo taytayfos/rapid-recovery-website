@@ -263,7 +263,7 @@
                 <li>Posing room access</li>
                 <li>Free parking</li>
             </ul>
-            <a href="https://form.jotform.com/260487862745066" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">See Front Desk for Pass</a>
+            <span class="btn btn-secondary">See Front Desk</span>
         </article>
     </div>
 
@@ -366,7 +366,9 @@
         <p class="location-text">There's limited parking in front of our space so you may need to park in the side lot and walk over depending on how busy we are.</p>
         <div class="location-hours">
             <h4>Hours of Operation:</h4>
-            <p><strong>4:00am - 10:00pm, 365 Days a Year</strong></p>
+            <p><strong>Monday – Friday:</strong> 4:00am – 10:00pm</p>
+            <p><strong>Saturday – Sunday:</strong> 6:00am – 10:00pm</p>
+            <p class="hours-note">Open 365 Days a Year</p>
         </div>
         <div class="location-cta">
             <a href="https://maps.google.com/?q=3243+Hamilton+Blvd+Allentown+PA+18103" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Get Directions</a>
