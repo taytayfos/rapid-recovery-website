@@ -210,7 +210,7 @@
     </div>
 
     <!-- Presale Banner -->
-    <a href="https://form.jotform.com/260487862745066" class="presale-banner reveal" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;display:block;cursor:pointer;">
+    <a href="https://elitetrainingcenter.gymmasteronline.com/portal/signup" class="presale-banner reveal" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;display:block;cursor:pointer;">
         <h3>🎉 Pre-sale Launching Wednesday 4/29</h3>
         <ul class="presale-list">
             <li>First 100 members locked in at <strong>$75/mo FOREVER</strong></li>
@@ -236,7 +236,7 @@
                 <li>Free parking</li>
                 <li>Lowest monthly rate</li>
             </ul>
-            <a href="https://form.jotform.com/260487862745066" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join Now</a>
+            <a href="https://elitetrainingcenter.gymmasteronline.com/portal/signup" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join Now</a>
         </article>
 
         <article class="membership-card reveal">
@@ -250,7 +250,7 @@
                 <li>Free parking</li>
                 <li>No long-term commitment</li>
             </ul>
-            <a href="https://form.jotform.com/260487862745066" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join Now</a>
+            <a href="https://elitetrainingcenter.gymmasteronline.com/portal/signup" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join Now</a>
         </article>
 
         <article class="membership-card reveal">
@@ -372,7 +372,7 @@
         </div>
         <div class="location-cta">
             <a href="https://maps.google.com/?q=3243+Hamilton+Blvd+Allentown+PA+18103" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Get Directions</a>
-            <a href="https://form.jotform.com/260487862745066" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Join Now</a>
+            <a href="https://elitetrainingcenter.gymmasteronline.com/portal/signup" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Join Now</a>
         </div>
     </div>
 </section>

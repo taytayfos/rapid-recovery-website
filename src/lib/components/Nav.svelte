@@ -164,7 +164,7 @@
         </ul>
 
         <!-- CTA Button -->
-        <a href="https://form.jotform.com/260487862745066" class="nav-cta" target="_blank" rel="noopener noreferrer">Join Now</a>
+        <a href="https://elitetrainingcenter.gymmasteronline.com/portal/signup" class="nav-cta" target="_blank" rel="noopener noreferrer">Join Now</a>
 
         <!-- Mobile Menu Toggle -->
         <button 
@@ -232,7 +232,7 @@
 
         <!-- CTA -->
         <div class="mobile-cta">
-            <a href="https://form.jotform.com/260487862745066" class="btn btn-primary" target="_blank" rel="noopener noreferrer" on:click={closeMobileMenu}>Join Now</a>
+            <a href="https://elitetrainingcenter.gymmasteronline.com/portal/signup" class="btn btn-primary" target="_blank" rel="noopener noreferrer" on:click={closeMobileMenu}>Join Now</a>
         </div>
     </div>
 </nav>
