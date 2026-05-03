@@ -225,8 +225,8 @@
         <article class="pricing-card reveal">
             <h3 class="pricing-name">Elite Training & Biomechanical Analysis</h3>
             <p class="pricing-subtitle">90 Minutes</p>
-            <p class="pricing-price">$250 <span class="price-label">member</span></p>
-            <p class="pricing-price-alt">$300 <span class="price-label">non-member (day pass included)</span></p>
+            <p class="pricing-price">$225 <span class="price-label">member</span></p>
+            <p class="pricing-price-alt">$275 <span class="price-label">non-member (day pass included)</span></p>
             <ul class="pricing-features">
                 <li>Train with Dr. Foster</li>
                 <li>Movement analysis</li>
