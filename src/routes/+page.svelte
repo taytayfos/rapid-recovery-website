@@ -5,8 +5,29 @@
     import Dialog from '$lib/components/Dialog.svelte';
 
     let promoDialog;
+    let reviewsIframe;
 
     onMount(() => {
+        // Auto-resize the LeadConnector reviews widget to fit its content
+        // (the iframe ships with a fixed height + scrolling disabled, which clips
+        // taller layouts on mobile). The widget posts its height to the parent.
+        const handleReviewMessage = (event) => {
+            if (typeof event.origin !== 'string' || !event.origin.includes('leadconnectorhq.com')) return;
+            if (!reviewsIframe) return;
+
+            let data = event.data;
+            if (typeof data === 'string') {
+                try { data = JSON.parse(data); } catch { return; }
+            }
+            if (!data || typeof data !== 'object') return;
+
+            const height = data.height ?? data.docHeight ?? data.scrollHeight;
+            if (height && Number.isFinite(Number(height))) {
+                reviewsIframe.style.height = `${Number(height)}px`;
+            }
+        };
+        window.addEventListener('message', handleReviewMessage);
+
         // Re-initialize form embed script for SPA navigation
         const existingScript = document.querySelector('script[src="https://link.elitetrainingcenter.org/js/form_embed.js"]');
         if (existingScript) existingScript.remove();
@@ -39,6 +60,7 @@
 
         return () => {
             window.removeEventListener('scroll', checkReveal);
+            window.removeEventListener('message', handleReviewMessage);
             clearTimeout(promoTimeout);
         };
     });
@@ -345,11 +367,17 @@
     </div>
     <div class="reviews-content reveal">
         <p class="reviews-intro">See what our members are saying about Rapid Recovery: Elite Training Center</p>
-        <div class="reviews-placeholder">
-            <p>Google Reviews coming soon...</p>
-        </div>
-        <div class="reviews-cta">
-            <span class="btn btn-primary btn-disabled">Leave a Review on Google (Coming Soon)</span>
+        <div class="review-widget-wrapper">
+            <iframe
+                bind:this={reviewsIframe}
+                id="msgsndr_reviews"
+                src="https://backend.leadconnectorhq.com/appengine/reviews/get_widget/QWCXhqVIJwvud0EmvvoF"
+                title="Customer Reviews"
+                frameborder="0"
+                scrolling="no"
+                style="min-width:100%;width:100%;border:none;"
+                height="1157"
+            ></iframe>
         </div>
     </div>
 </section>
@@ -501,22 +529,16 @@
         font-size: 1.1rem;
     }
 
-    .reviews-placeholder {
-        padding: var(--space-xl);
-        background: var(--color-bg-alt);
-        border-radius: 8px;
-        margin-bottom: var(--space-lg);
-        text-align: center;
+    .review-widget-wrapper {
+        max-width: 1100px;
+        margin: 0 auto;
     }
 
-    .reviews-placeholder p {
-        color: var(--color-text-muted);
-        font-style: italic;
-    }
-
-    .btn-disabled {
-        opacity: 0.6;
-        cursor: not-allowed;
+    .review-widget-wrapper iframe {
+        display: block;
+        width: 100%;
+        min-width: 100%;
+        border: none;
     }
 
     .section-description {
