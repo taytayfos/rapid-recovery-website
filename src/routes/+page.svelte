@@ -5,29 +5,8 @@
     import Dialog from '$lib/components/Dialog.svelte';
 
     let promoDialog;
-    let reviewsIframe;
 
     onMount(() => {
-        // Auto-resize the LeadConnector reviews widget to fit its content
-        // (the iframe ships with a fixed height + scrolling disabled, which clips
-        // taller layouts on mobile). The widget posts its height to the parent.
-        const handleReviewMessage = (event) => {
-            if (typeof event.origin !== 'string' || !event.origin.includes('leadconnectorhq.com')) return;
-            if (!reviewsIframe) return;
-
-            let data = event.data;
-            if (typeof data === 'string') {
-                try { data = JSON.parse(data); } catch { return; }
-            }
-            if (!data || typeof data !== 'object') return;
-
-            const height = data.height ?? data.docHeight ?? data.scrollHeight;
-            if (height && Number.isFinite(Number(height))) {
-                reviewsIframe.style.height = `${Number(height)}px`;
-            }
-        };
-        window.addEventListener('message', handleReviewMessage);
-
         // Re-initialize form embed script for SPA navigation
         const existingScript = document.querySelector('script[src="https://link.elitetrainingcenter.org/js/form_embed.js"]');
         if (existingScript) existingScript.remove();
@@ -60,7 +39,6 @@
 
         return () => {
             window.removeEventListener('scroll', checkReveal);
-            window.removeEventListener('message', handleReviewMessage);
             clearTimeout(promoTimeout);
         };
     });
@@ -367,17 +345,16 @@
     </div>
     <div class="reviews-content reveal">
         <p class="reviews-intro">See what our members are saying about Rapid Recovery: Elite Training Center</p>
-        <div class="review-widget-wrapper">
+        <div class="reviews-map-wrapper">
             <iframe
-                bind:this={reviewsIframe}
-                id="msgsndr_reviews"
-                src="https://backend.leadconnectorhq.com/appengine/reviews/get_widget/QWCXhqVIJwvud0EmvvoF"
-                title="Customer Reviews"
-                frameborder="0"
-                scrolling="no"
-                style="min-width:100%;width:100%;border:none;"
-                height="1157"
+                title="Rapid Recovery: Elite Training Center on Google Maps"
+                src="https://www.google.com/maps?cid=1365545417083028674&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
+        </div>
+        <div class="reviews-cta">
+            <a href="https://www.google.com/maps?cid=1365545417083028674" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Read Our Google Reviews</a>
         </div>
     </div>
 </section>
@@ -529,16 +506,24 @@
         font-size: 1.1rem;
     }
 
-    .review-widget-wrapper {
-        max-width: 1100px;
-        margin: 0 auto;
+    .reviews-map-wrapper {
+        max-width: 900px;
+        margin: 0 auto var(--space-xl);
+        border-radius: 8px;
+        overflow: hidden;
     }
 
-    .review-widget-wrapper iframe {
+    .reviews-map-wrapper iframe {
         display: block;
         width: 100%;
-        min-width: 100%;
+        height: 450px;
         border: none;
+    }
+
+    @media (max-width: 768px) {
+        .reviews-map-wrapper iframe {
+            height: 360px;
+        }
     }
 
     .section-description {
