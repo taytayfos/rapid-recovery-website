@@ -103,7 +103,7 @@
                 We're open 365 days a year because your schedule shouldn't dictate your progress. Our staff knows you by name — not a key tag number.
             </p>
             <p class="about-text">
-                We feature hand-picked, high-end equipment curated by Dr. Taylor Foster, DPT, CSCS, and a recovery lounge with infrared saunas, inversion tables, cold plunges, massage guns, and Normatec compression.
+                We feature hand-picked, high-end equipment curated by Dr. Taylor Foster, DPT, CSCS, and a recovery lounge with infrared saunas, inversion tables, massage guns, and Normatec compression.
             </p>
             <p class="about-text">
                 We have a dedicated turf space, elite-level environment, and a community that listens — constantly evolving from member feedback.
@@ -188,7 +188,7 @@
             <img src="{base}/images/recovery_services.jpg" alt="Recovery services">
             <div class="feature-overlay">
                 <h3>Recovery Services</h3>
-                <p>Cold plunge, saunas, and more</p>
+                <p>Saunas, compression, and more</p>
             </div>
         </a>
         <a href="{base}/training" class="feature-card reveal">

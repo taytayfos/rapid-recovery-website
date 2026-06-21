@@ -108,10 +108,6 @@
             <p>Deep-penetrating heat therapy to promote circulation, relaxation, and muscle recovery.</p>
         </div>
         <div class="recovery-card reveal">
-            <h3>Cold Plunge</h3>
-            <p>Cold water immersion to reduce inflammation, boost recovery, and enhance mental resilience.</p>
-        </div>
-        <div class="recovery-card reveal">
             <h3>Inversion Tables</h3>
             <p>Decompress your spine, relieve pressure, and improve posture through controlled inversion therapy.</p>
         </div>
