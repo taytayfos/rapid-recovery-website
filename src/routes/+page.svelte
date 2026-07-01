@@ -209,20 +209,6 @@
         <p class="section-description">Become Elite. Join The Elite Training Center and unlock your full potential. Limited to 500 members.</p>
     </div>
 
-    <!-- Presale Banner -->
-    <a href="https://elitetrainingcenter.gymmasteronline.com/portal/signup" class="presale-banner reveal" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;display:block;cursor:pointer;">
-        <h3>🎉 Pre-sale Launching Wednesday 4/29</h3>
-        <ul class="presale-list">
-            <li>First 100 members locked in at <strong>$75/mo FOREVER</strong></li>
-            <li>If membership cap is reached before opening, 5 lucky members will get a whole year membership for free!</li>
-            <li>Waived $100 application fee included</li>
-            <li>Early access to the gym prior to grand opening included</li>
-            <li>3 free day passes included</li>
-            <li>Free T-shirt included</li>
-            <li>Surprise gift worth $100 included</li>
-        </ul>
-    </a>
-
     <div class="memberships-grid">
         <article class="membership-card featured reveal">
             <span class="membership-badge">Best Value</span>
