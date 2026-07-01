@@ -286,7 +286,7 @@
     </div>
 
     <div class="special-pricing reveal">
-        <p><strong>Special Pricing Available:</strong> IFBB Pro's, Active Military, Veterans, Healthcare Workers, Police, Firefighters, and EMS. Contact us for details. Proof required.</p>
+        <p><strong>Special Pricing Available:</strong> IFBB Pro's, Active Military, Veterans, and First Responders. Contact us for details. Proof required.</p>
     </div>
 
     <div class="addon-option reveal">
