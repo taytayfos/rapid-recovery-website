@@ -20,7 +20,7 @@
                 <p class="footer-shopping-center">Dorneyville Shopping Center</p>
                 <p>3243 Hamilton Blvd</p>
                 <p>Allentown, PA 18103</p>
-                <p><a href="tel:+16107986815">(610) 798-6815</a></p>
+                <p><a href="tel:+16107986815">(610) 554-9009</a></p>
                 <p><a href="mailto:support@elitetrainingcenter.org">support@elitetrainingcenter.org</a></p>
             </div>
             <div class="footer-social">
